@@ -5,13 +5,14 @@
   <link rel="stylesheet" type="text/css" href="../structure/homePage.css">
   <link href='https://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="contact.css">
 </head>
       <body>
       <header>
       <img src="../structure/homeImages/logo.jpg" id = 'logo'>
       <h1>Whalephants</h1>
       </header>
-      <section>
+      <section class="contactSect">
             <aside>
                 <ul>
                   <li class= 'nav' id ='home'>Home</li>
@@ -22,15 +23,21 @@
                   <li class= 'nav' id ='game'>Hang Man</li>
                 </ul>
             </aside>
-            <article>
-
-
-
-
-
-
-
-            </article>
+            <div class="contactDiv">
+                <article class="formArti">
+                    <p id="messageSent" class="responseP"></p>
+                    <div id="divInner" class="divInner">
+                    <p id="messageInstruct" class="messageInstruct">If you would like to reach us, please enter the information below. We will respond as soon as we can.</p>
+                    <form>
+                      <label>First Name</label><input id="fnameIn" class="contactInput" type="text" name="fname">
+                      <label>Last Name</label><input id="lnameIn" class="contactInput" type="text" name="lname">
+                      <label>Email</label><input id="emailIn" class="contactInput" type="text" name="email">
+                      <label>Message</label><textarea id="messageIn" class="contactArea" rows="4" cols="50"></textarea>
+                    </form>
+                    <button id="submitForm" class="submitButton">Submit</button>
+                    </div>
+                </article>
+            </div>
       </section>
       <footer>
           <div id='footerBar'>
@@ -63,6 +70,8 @@
       </footer>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="../structure/homepage.js"></script>
+<script src="contact.js"></script>
 </body>
 </html>
