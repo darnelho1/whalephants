@@ -1,0 +1,23 @@
+{
+  "name": "whalephants",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ascasson/whalephants.git"
+  },
+  "author": "Anthony Casson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ascasson/whalephants/issues"
+  },
+  "homepage": "https://github.com/ascasson/whalephants#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3"
+  }
+}
