@@ -47,12 +47,12 @@ $('#countDown').on('click', function(){
   window.open('../countDownPage/countDown.html', '_self');
 });
 $('#countDown').mouseover(function(){
-    $("#countDown").css('font-size', '1.2em');
+    $("#countDown").css('font-size', '1em');
     $("#countDown").css('width', '100px');
     $('#countDown').css('height', '30px');
   });
 $('#countDown').mouseout(function(){
-  $("#countDown").css('font-size', '1em');
+  $("#countDown").css('font-size', '.9em');
     $("#countDown").css('width', '90px');
     $('#countDown').css('height', '25px');
 });
@@ -62,12 +62,12 @@ $('#contactUs').on('click', function(){
   window.open('../contactPage/contactUs.html', '_self');
 });
 $('#contactUs').mouseover(function(){
-    $("#contactUs").css('font-size', '1.3em');
+    $("#contactUs").css('font-size', '1.1em');
     $("#contactUs").css('width', '100px');
     $('#contactUs').css('height', '30px');
   });
 $('#contactUs').mouseout(function(){
-  $("#contactUs").css('font-size', '1em');
+  $("#contactUs").css('font-size', '.9em');
     $("#contactUs").css('width', '90px');
     $('#contactUs').css('height', '25px');
 });

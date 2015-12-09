@@ -3,6 +3,10 @@ body {
     -webkit-flex-direction: column;
     -webkit-justify-content: center;
     -webkit-align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     max-width: 90%;
     min-width: 1043px;
     margin: 0 auto;
@@ -17,9 +21,13 @@ header{
     -webkit-flex-direction: row;
     -webkit-justify-content: flex-start;
     -webkit-align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
     border: solid black;
     border-radius: 20px 20px 0 0;
-    width: 79.5%;
+    width: 840px;
     height: 90px;
     /*background-color: rgba(255, 97, 0, 0.5);*/
     box-shadow: 10px 0 15px #888888;
@@ -48,8 +56,12 @@ section{
     -webkit-flex-direction: row;
     -webkit-justify-content: center;
     -webkit-align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     box-shadow: 10px 0 15px #888888;
-    width: 89.2%;
+    width: 945px;
 }
 
 aside{
@@ -62,6 +74,10 @@ aside{
     -webkit-flex-direction: column;
     -webkit-justify-content: flex-start;
     -webkit-align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     background-color: rgb(76,11,122);
 
 }
@@ -87,6 +103,10 @@ article{
   -webkit-flex-direction: column;
   -webkit-justify-content: center;
   -webkit-align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   width: 85%;
   height: 800px;
@@ -97,7 +117,7 @@ article{
 }
 
 footer{
-  width: 88.7%;
+  width: 940px;
   height: 200px;
   border: solid;
   border-radius: 0 0 20px 20px;
@@ -106,6 +126,10 @@ footer{
     -webkit-flex-direction: row;
     -webkit-justify-content: center;
     -webkit-align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 10px;
     background-image: url('./homeImages/footerBackground.jpg');
     background-repeat: none;
@@ -117,6 +141,10 @@ footer{
     -webkit-flex-direction: row;
     -webkit-justify-content: space-between;
     -webkit-align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding-right: 40px;
     background-color: rgba(0, 0, 0, .5);
     border-radius: 90px
@@ -125,6 +153,8 @@ footer{
 .bottomList{
   display: -webkit-flex;
     -webkit-flex-direction: column;
+    display: flex;
+    flex-direction: column;
   margin-top: 5px;
   text-align: left;
 
@@ -135,6 +165,10 @@ footer{
     -webkit-flex-direction: column;
     -webkit-justify-content: center;
     -webkit-align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-left: 50px;
 }
 
