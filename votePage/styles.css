@@ -1,4 +1,6 @@
 .image{
+  -webkit-display: flex;
+  -webkit-flex-direction:column;
   display: flex;
   flex-direction:column;
   height: 250px;
@@ -17,13 +19,17 @@
 }
 
 .button-p{
-  display: flex;
+  -webkit-display: flex;
+  -display: flex;
   /*width: 80px;*/
+  -webkit-flex-direction:row;
   flex-direction:row;
   /*margin: 200px;*/
   /*align-self:flex-end;*/
 }
 .outerDiv{
+  -webkit-display: flex;
+  -webkit-flex-direction: column;
   display: flex;
   flex-direction: column;
   margin: 50px;
@@ -51,9 +57,12 @@ p{
 }
 
 article{
+  -webkit-display: flex;
+  -webkit-flex-direction:row;
+  -webkit-flex-wrap: wrap;
   display: flex;
   flex-direction:row;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   max-height: inherit;
   max-width: inherit;
   height: 1600px;
