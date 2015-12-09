@@ -1,0 +1,159 @@
+body {
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    max-width: 90%;
+    min-width: 1043px;
+    margin: 0 auto;
+    background-image: url('./homeImages/fireGlow.jpg');
+    background-repeat: none;
+    background-size: 100%;
+}
+
+header{
+    margin-top: 20px;
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: flex-start;
+    -webkit-align-items: center;
+    border: solid black;
+    border-radius: 20px 20px 0 0;
+    width: 79.5%;
+    height: 90px;
+    /*background-color: rgba(255, 97, 0, 0.5);*/
+    box-shadow: 10px 0 15px #888888;
+    padding: 50px;
+    background-image: url('./homeImages/skyView.jpg');
+    background-repeat: none;
+    background-size: 100%;
+    }
+
+#logo{
+    width: 180px;
+    height: 180px;
+    margin-right: 100px;
+    margin-left: 100px;
+    border-radius: 90px;
+}
+
+h1{
+  font-size: 4em;
+  font-family: 'Black Ops One', cursive;
+  cursor: url("bml.gif"), auto;
+}
+
+section{
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    box-shadow: 10px 0 15px #888888;
+    width: 89.2%;
+}
+
+aside{
+    width: 150px;
+    border-bottom: solid rgb(76,11,122);
+    border-top: solid rgb(76,11,122);
+    border-left: solid black;
+    height: 800px;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: flex-start;
+    -webkit-align-items: center;
+    background-color: rgb(76,11,122);
+
+}
+
+.nav {
+  width: 90px;
+  height: 25px;
+  border: solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #888888;
+  text-align: center;
+  list-style: none;
+  margin-top: 50px;
+  margin-right: 40px;
+  padding-top: 5px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+article{
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  text-align: center;
+  width: 85%;
+  height: 800px;
+  border: solid;
+  background-image: url('./homeImages/chalkboard.jpg');
+  background-repeat: none;
+  background-size: 900px 800px;
+}
+
+footer{
+  width: 88.7%;
+  height: 200px;
+  border: solid;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 10px 0 15px #888888;
+  display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    margin-bottom: 10px;
+    background-image: url('./homeImages/footerBackground.jpg');
+    background-repeat: none;
+    background-size: 100%;
+}
+
+#footerBar{
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: space-between;
+    -webkit-align-items: center;
+    padding-right: 40px;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 90px
+}
+
+.bottomList{
+  display: -webkit-flex;
+    -webkit-flex-direction: column;
+  margin-top: 5px;
+  text-align: left;
+
+}
+
+.footerNav{
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    margin-left: 50px;
+}
+
+.footerTitle{
+  font-size: 1.3em;
+  border: none;
+  margin-left: 25px;
+  margin-right: 25px;
+  list-style: none;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.footerLink{
+  border: none;
+  margin-left: 25px;
+  margin-right: 25px;
+  list-style: none;
+  margin-bottom: 10px;
+  color: white;
+  cursor: pointer;
+}
