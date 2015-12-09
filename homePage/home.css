@@ -1,0 +1,43 @@
+#arTitle{
+  font-size: 4em;
+  font-family: 'Gochi Hand', cursive;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  color: white;
+}
+
+#about{
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  font-family: 'Gochi Hand', cursive;
+  color: white;
+  font-size: 2em;
+  width: 700px;
+  height: 150px;
+  /*border: solid;*/
+}
+
+#spin{
+  font-family: 'Gochi Hand', cursive;
+  color: white;
+  font-size: 1em;
+}
+
+.swiper-container {
+    width: 400px;
+    height: 400px;
+    margin-bottom: 50px;
+    /*position: absolute;
+    left: 50%;
+    top: 50%;*/
+    /*margin-left: -150px;
+    margin-top: -150px;*/
+    /*border: solid;*/
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+}

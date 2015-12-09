@@ -1,0 +1,150 @@
+.days{
+    padding: 10px;
+    color: white;
+    /*border: solid white;*/
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+#days{
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    color: white;
+     font-family: 'Gochi Hand', cursive;
+    /*border: solid white;*/
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-bottom: 0;
+    position: relative;
+    top: -50px;
+}
+.hours{
+    padding: 10px;
+    color: white;
+    /*border: solid white;*/
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+
+.minutes{
+    padding: 10px;
+    color: white;
+    margin-left: 10px;
+    margin-bottom: 0;
+    /*border: solid white;
+    border-radius: 10px;
+*/}
+.seconds{
+    padding: 10px;
+    color: white;
+    margin-left: 10px;
+    margin-bottom: 0;
+    /*border: solid white;*/
+    border-radius: 10px;
+}
+
+#clock{
+    font-size: 6em;
+    color: white;
+    border-radius: 10px;
+}
+
+#clock{
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+}
+.clockBoarder{
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    font-family: 'Gochi Hand', cursive;
+}
+
+p{
+  font-size: .3em;
+  margin-top: 0;
+}
+
+.words{
+    position: relative;
+  left: 20px;
+  top: -40px;
+}
+
+#kids{
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: 200px;
+  left: -230px;
+  -webkit-transform: rotate(-30deg);
+}
+#welcome{
+    font-family: 'Gochi Hand', cursive;
+    color: white;
+    position: relative;
+    left: -250px;
+    top: 150px;
+    font-size: 2em;
+    -webkit-transform: rotate(-60deg);
+    cursor: default;
+}
+
+#drink{
+    font-family: 'Gochi Hand', cursive;
+    color: white;
+    position: relative;
+    left: 250px;
+    top: 100px;
+    font-size: 2em;
+    -webkit-transform: rotate(30deg);
+    cursor: default;
+}
+
+#time{
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    position: relative;
+    top: -50px;
+}
+
+.timeIn{
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    /*border:solid;*/
+}
+.colin{
+  font-size: .9em;
+  /*border: solid;*/
+  margin-bottom: 0px;
+}
+
+#pin{
+  width: 35px;
+  height: 50px;
+  position: relative;
+  top: -260px;
+  left: -240px;
+}
+#kids{
+    cursor: pointer;
+}
+#bmimg{
+  width: 200px;
+  height: 500px;
+  position: relative;
+  top: -100px;
+  -webkit-filter: invert(100%);
+   filter: invert(100%);
+   cursor: pointer;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>)'( Whalephants )'(</title>
+    <link rel="stylesheet" type="text/css" href="../structure/homePage.css">
+    <link href='https://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="home.css">
+</head>
+
+<body>
+      <header>
+          <img src="../structure/homeImages/logo.jpg" id = 'logo'>
+          <h1>Whalephants</h1>
+      </header>
+
+      <section>
+            <aside>
+                <ul>
+                  <li class= 'nav' id ='home'>Home</li>
+                  <li class= 'nav' id = 'aboutUs'>About</li>
+                  <li class= 'nav' id ='vote'>Vote</li>
+                  <li class= 'nav' id = 'countDown'>Count Down</li>
+                  <li class= 'nav' id ='contactUs'>Contact Us</ul>
+                  <li class= 'nav' id ='game'>Hang Man</li>
+            </aside>
+
+            <article>
+                <div id='desc'>
+                      <h2 id = 'arTitle'>Welcome To Camp</h2>
+                      <p id='about'>Whalephents is a burning man camp that has been
+                      contributing for many years. Living at 9:15 and J we stive to
+                      make sure that people around us are having a great time and drinking
+                      Amazing drinks.</p>
+                </div>
+
+                <div class="swiper-container">
+                      <div class="swiper-wrapper">
+                          <div class="swiper-slide" style="background-image:url(./homePageImages/building.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(./homePageImages/fireWorks.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(./homePageImages/group.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(./homePageImages/robotheart.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(./homePageImages/ballon.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(./homePageImages/campTent.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(./homePageImages/distrikt.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(./homePageImages/foot.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(./homePageImages/kitchen.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(./homePageImages/lightNet.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(./homePageImages/octopus.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(./homePageImages/rayGuys.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(./homePageImages/robotSunset.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(./homePageImages/stone.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(./homePageImages/stoneWomen.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(./homePageImages/temple.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(./homePageImages/theBoys.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(./homePageImages/theGroup.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(./homePageImages/theMan.jpg)"></div>
+                          <div class="swiper-slide" style="background-image:url(./homePageImages/fireworksMan.jpg)"></div>
+                      </div>
+            <!-- Add Pagination -->
+                      <div class="swiper-pagination"></div>
+                      <p id='spin'></p>
+                </div>
+            </article>
+      </section>
+
+      <footer>
+          <div id='footerBar'>
+              <div class ='footerNav'>
+                <ul class = 'bottomList'>
+                    <li class='footerTitle'><u>Find Your Way</u></li>
+                    <li class='footerLink' id='homeFooter'>Home</li>
+                    <li class='footerLink' id='aboutUsFooter'>About</li>
+                    <li class='footerLink' id="thanksFooter">Thanks</li>
+                </ul>
+              </div>
+              <div class ='footerNav'>
+                  <ul class = 'bottomList'>
+                      <li class='footerTitle'><u>Interact</u></li>
+                      <li class='footerLink' id='voteFooter'>Vote</li>
+                      <li class='footerLink' id='countDownFooter'>Count Down</li>
+                      <li class='footerLink' id='contactUsFooter'>Contact Us</li>
+                  </ul>
+              </div>
+              <div class ='footerNav'>
+                  <ul class = 'bottomList'>
+                      <li class='footerTitle'><u>Like Us...</u></li>
+                      <li class='footerLink' id='facebook'>Facebook</li>
+                      <li class='footerLink' id='twitter'>Twitter</li>
+                      <li class='footerLink' id='soundcloud'>Soundcloud</li>
+                  </ul>
+              </div>
+          </div>
+      </footer>
+
+    <script src="./swiper.min.js"></script>
+        <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            effect: 'cube',
+            grabCursor: true,
+            cube: {
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 0.94
+            }
+        });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js'></script>
+    <script src="../structure/homepage.js"></script>
+    <script src="./home.js"></script>
+</body>
+</html>
