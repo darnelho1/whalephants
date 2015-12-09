@@ -1,0 +1,70 @@
+/*Form Styling*/
+.contactSect {
+	    display: -webkit-flex;
+	    flex-direction: row;
+    -webkit-justify-content: flex-start;
+    box-shadow: 10px 0 15px #888888;
+    width: 89.2%;
+}
+
+.contactDiv {
+	   display: -webkit-flex;
+	   flex-direction: column;
+    box-shadow: 10px 0 15px #888888;
+	width: 100%;
+}
+
+.formArti {
+	display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: flex-start;
+  width: 100%;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+}
+
+input {
+	width: 200px;
+}
+
+label {
+	color: white;
+	font-size: 1.25em;
+	width: auto;
+	margin-top: 10px;
+	align-self: flex-start;
+}
+
+textarea {
+	width: 300px;
+}
+
+.submitButton {
+	width: 50px;
+	margin-top: 10px;
+	align-self: flex-start;
+}
+
+.divInner {
+	display: flex;
+	align-self: flex-start;
+	flex-direction: column;
+	margin-left: 100px;
+}
+
+.responseP {
+	font-size: 1.25em;
+	color: white;
+}
+
+.messageInstruct {
+	color: white;
+	font-size: 1.25em;
+	width: 500px;
+	align-self: center;
+	text-align: left;
+}
