@@ -1,0 +1,65 @@
+.image{
+  display: flex;
+  flex-direction:column;
+  height: 250px;
+  width: 200px;
+  background-size: 250px, 200px;
+  background-repeat: no-repeat;
+  /*border:solid;*/
+
+}
+
+.divbackground p{
+  word-wrap: break-word;
+  height: 200px;
+  width: 200px;
+  text-align: left;
+}
+
+.button-p{
+  display: flex;
+  /*width: 80px;*/
+  flex-direction:row;
+  /*margin: 200px;*/
+  /*align-self:flex-end;*/
+}
+.outerDiv{
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  /*border:solid;*/
+  height: 300px;
+  width: 200px;
+
+}
+
+.ingredients{
+  color: white;
+  font-family: 'Gochi Hand', cursive;
+  font-size: 20px;
+  background-color: rgba(0,0,0,.8);
+}
+
+p{
+  /*border:solid;*/
+}
+
+
+
+#drink4{
+  background-size: 350px, 300px;
+}
+
+article{
+  display: flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  max-height: inherit;
+  max-width: inherit;
+  height: 1600px;
+  background-size: 1600px, 800px;
+}
+
+aside{
+  height: 1600px;
+}
