@@ -19,7 +19,13 @@ var Mixer = function(drinkName,drinkImage,primaryLiqour,ingredients,recipe,garni
       drinks.push(this);
 }
 
+var tracker = {
+  votes: [],
 
+};
+
+
+//Drink Objects
 var martini = new Mixer('Martini','images/martini.jpg','Gin',['1/2 oz (1 part) Dry vermouth', '3 oz (6 parts) Gin'],'Preparation: Straight: Pour all ingredients into mixing glass with ice cubes. Stir well. Strain in chilled martini cocktail glass. Squeeze oil from lemon peel onto the drink, or garnish with olive.',['Olive','Lemon twist']);
 
 var manhattan = new Mixer('Manhatan','images/manhattan.jpg','Rye',[' 2 oz Rye Whisky', '1 oz Italian vermouth', '2 dashes Angostura bitters'],'Preparation: Pour all ingredients into mixing glass stir over ice, strained into a chilled glass, garnished, and served straight up.','Cherry');
@@ -48,6 +54,8 @@ var whiskeySour = new Mixer ('Whiskey Sour','images/whiskeySour.jpg','Bourbon',[
 var sazerac = new Mixer ('Sazerac', 'images/sazerac.jpg',['Cognac','Rye Whiskey'],['1/4 oz Absinthe', 'One sugar cube' , '1 1/2 oz Rye whiskey or Cognac', "Three dashes Peychaud's Bitters"],'Lemon Peel');
 
 
+
+//function to generate html to place images on screen
 function loadImages(){
   drinks.forEach(function(drink){
   $imageId.append("<div  class= 'outerDiv ingredients' id='outerDiv" + drink.drinkId + "'</div>");
@@ -63,9 +71,13 @@ function loadImages(){
 )
 };
 
+
+//calling the load images function
 loadImages();
 
 
+
+//function that handles generating the mouse over data that is placed on top of the drink images
 function onMousover(){
   drinks.forEach(function(drink){
     $(document).ready(function(){
@@ -88,36 +100,40 @@ function onMousover(){
   });
 }
 
+
+//calling the mouse over functions
 onMousover();
-  // $('#drink' + drink.drinkId).mouseover = function(){
-  //     drink.ingredients.forEach(function(item){
-  //     $('#ingredients'+ drink.drinkId).append("<li>" + item + "</li>")
-  //     })
 
-  //   };
-
+//couting the number of votes on drinks that have been made.
 var bttnCounter = 0;
 
-
+//function to check if a drink has been voted on
 function radio_button_checker()
 {
   $(document).ready(function(){
     $radios = $(".radiobtn") ;
     //console.log($radios);
 
-
     $radios.each(function(radio, val){
 
       if (val.checked){
         //console.log(radio);
-        console.log(drinks[radio]);
-        drinks[radio].drinkVotes++
-        console.log(drinks[radio]);
+        //console.log(drinks[radio]);
+        //tracker.votes.push(drinks[radio]);
+        //console.log(tracker.votes);
         bttnCounter++
-        voteChart();
+        //voteChart();
 
 
         console.log(bttnCounter);
+
+      }
+
+      if ((bttnCounter > 1) && val.checked){
+        tracker.votes.push(drinks[radio]);
+        console.log(tracker.votes);
+        drinks[radio].drinkVotes++;
+        console.log(drinks[radio])
 
       }
       //console.log(val);
@@ -127,16 +143,10 @@ function radio_button_checker()
 
 };
 
-$(document).ready(function(){
-  $(".button-p").click(function(){
-      radio_button_checker();
-      })
-});
-
 
 function voteChart(){
 
-  //code for pushing chart
+  //place holder for code for pushing chart
 
 
   if(bttnCounter>2){
@@ -144,8 +154,5 @@ function voteChart(){
     console.log('done');
   }
 }
-
-
-
 
 
