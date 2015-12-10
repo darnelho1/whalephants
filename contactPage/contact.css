@@ -88,3 +88,14 @@ textarea {
 	-webkit-align-self: center;
 	text-align: left;
 }
+
+span {
+	color: red;
+}
+
+.validateP {
+	font-size: 1.25em;
+	color: yellow;
+	text-decoration: underline;
+	text-align: left;
+}

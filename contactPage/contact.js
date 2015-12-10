@@ -12,6 +12,8 @@ $submitClick = $('#submitForm').on('click', function(){
 	var lname = $('#lnameIn').val();
 	var email = $('#emailIn').val();
 	var message = $('#messageIn').val();
+
+	if (fname&&lname&&email&&message) {
 	var user = new userMessage(fname, lname, email, message);
 	$.ajax({
 		url:'http://localhost:3000/users',
@@ -27,4 +29,8 @@ $submitClick = $('#submitForm').on('click', function(){
 	$('form').remove();
 	$('button').remove();
 	$('#messageSent').html('Your message has been sent!<br></br>We will reply as soon as we can.</p>')
+	
+	}else {
+		$('#validateP').html('<p>Please fill ALL required fields!</p>')
+	}
 });

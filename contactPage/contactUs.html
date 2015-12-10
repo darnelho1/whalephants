@@ -27,14 +27,15 @@
                 <article class="formArti">
                     <p id="messageSent" class="responseP"></p>
                     <div id="divInner" class="divInner">
-                    <p id="messageInstruct" class="messageInstruct">If you would like to reach us, please enter the information below. We will respond as soon as we can.</p>
+                    <p id="messageInstruct" class="messageInstruct">If you would like to reach us, please enter the information below. We will respond as soon as we can.<br></br><span>*</span>required</p>
                     <form>
-                      <label>First Name</label><input id="fnameIn" class="contactInput" type="text" name="fname">
+                      <label><span>*</span>First Name</label><input id="fnameIn" class="contactInput" type="text" name="fname">
                       <label>Last Name</label><input id="lnameIn" class="contactInput" type="text" name="lname">
-                      <label>Email</label><input id="emailIn" class="contactInput" type="text" name="email">
-                      <label>Message</label><textarea id="messageIn" class="contactArea" rows="4" cols="50"></textarea>
+                      <label><span>*</span>Email</label><input id="emailIn" class="contactInput" type="email" name="email">
+                      <label><span>*</span>Message</label><textarea id="messageIn" class="contactArea" rows="4" cols="50"></textarea>
                     </form>
                     <button id="submitForm" class="submitButton">Submit</button>
+                    <p id="validateP" class="validateP"></p>
                     </div>
                 </article>
             </div>
