@@ -143,6 +143,12 @@ function radio_button_checker()
 
 };
 
+$(document).ready(function(){
+  $(".button-p").click(function(){
+      radio_button_checker();
+      })
+});
+
 
 function voteChart(){
 
@@ -154,5 +160,3 @@ function voteChart(){
     console.log('done');
   }
 }
-
-
