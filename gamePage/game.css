@@ -1,0 +1,104 @@
+article{
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    font-family: 'Gochi Hand', cursive;
+}
+#textBox{
+  display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    width: 650px;
+    height:200px;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+#hangImg{
+  width: 300px;
+  height: 300px;
+  border: solid white;
+  margin-top: 10px;
+}
+
+.letter{
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 0px;
+  text-align: center;
+  font-size: 2em;
+  border-radius: 5px;
+}
+p{
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 0px;
+  text-align: center;
+  color: white;
+  border: solid white;
+  font-size: 2em;
+  border-radius: 5px;
+}
+
+#usedLetters{
+  margin-top: 20px;
+  width: 500px;
+  height: 200px;
+  border: none;
+  color: white;
+  font-size: 2em;
+}
+
+#winner{
+  color: white;
+  font-size: 2em;
+  width: 500px;
+  height:200px;
+  border: none;
+}
+#inputs{
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+}
+p2{
+  font-size: 2em;
+  border-radius: 5px;
+  color: white;
+  margin-top: 20px;
+}
+#hint{
+  width: 500px;
+  border: none;
+  font-size: 1em;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+#guess1{
+  visibility: hidden;
+  width:40px;
+  height: 40px;
+  font-size: 2em;
+  border-radius: 5px;
+}
+#guess2{
+  visibility: hidden;
+  width:40px;
+  height: 40px;
+  font-size: 2em;
+  border-radius: 5px;
+}
+#gal{
+  width: 220px;
+  font-size: 2em;
+  border: none;
+  margin-left: 0px;
+  margin-top: 20px;
+}
