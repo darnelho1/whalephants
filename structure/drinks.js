@@ -55,7 +55,7 @@ function loadImages(){
   $outerDiv.append("<div class='image' id=drink" + drink.drinkId + "> </div>");
   //console.log(drink.drinkId);
   $('#drink'+drink.drinkId).css({"background-image": "url(" + drink.drinkImage + ")"})
-  $('#drink'+drink.drinkId).append("<ol  class = 'ingredients' id='ingredients" + drink.drinkId +"'></ol>")
+  $('#drink'+drink.drinkId).append("<ul  class = 'ingredients' id='ingredients" + drink.drinkId +"'></ul>")
   $outerDiv.append("<div class='button-p'> <input class ='radiobtn' type='radio' name='"+ drink.drinkName + " ' id='button"+ drink.drinkId + "' value='"+ drink.drinkName +"'>" + "<p>" + drink.drinkName + "</p>" + "</div>")
   $('#button'+drink.drinkId).css({ "display":"flex"})
   }
@@ -103,12 +103,16 @@ function radio_button_checker()
 {
   $(document).ready(function(){
     $radios = $(".radiobtn") ;
-    console.log($radios);
+    //console.log($radios);
 
 
     $radios.each(function(radio, val){
 
       if (val.checked){
+        //console.log(radio);
+        console.log(drinks[radio]);
+        drinks[radio].drinkVotes++
+        console.log(drinks[radio]);
         bttnCounter++
         voteChart();
 
