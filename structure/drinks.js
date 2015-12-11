@@ -151,6 +151,7 @@ function radio_button_checker()
   });
 
 };
+//listener for button clicks
 
 $(document).ready(function(){
   $(".button-p").click(function(){
