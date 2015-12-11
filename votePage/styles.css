@@ -41,6 +41,13 @@
   background-color: rgba(0,0,0,.8);
 }
 
+.voteComplete{
+  background-color: rgba(0,0,0,.8);
+  height: 200px;
+  width: 160px;
+
+}
+
 p{
   /*border:solid;*/
 }
@@ -58,7 +65,7 @@ article{
   max-width: inherit;
   height: 1600px;
   background-size: 1600px, 800px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 aside{
