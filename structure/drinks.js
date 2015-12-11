@@ -172,48 +172,20 @@ function voteChart(){
 }
 
 $searchBox = $('#searchBox');
-var searchArry = [];
-var runOnce= false;
 
+
+//event listner for search box
 $searchBox.keyup(function(){
   $userSearch = $searchBox.val();
   console.log($userSearch)
-  var searchLength = $userSearch.length - 1;
-  searchArryLength = searchArry.length;
-  while(!runOnce){
-      searchArry.push($userSearch.charAt(searchLength))
-      runOnce = true;
-      console.log(searchArry)
-      return;
-    };
-  console.log($userSearch.length);
-  console.log(searchArry.length);
-      if ($userSearch.length < searchArry.length){
-          searchArry.splice(searchArry.length , 1)
-          console.log(searchArry);
-      }
+  searchArry = [];
 
-      else {
-            searchArry.push($userSearch.charAt(searchLength));
-      };
-
-
-
+  drinks.forEach(function(drink){
+    if ((drink.drinkName.toUpperCase().indexOf($userSearch.toUpperCase())> -1) && (drink.drinkName.toUpperCase().charAt(0) === $userSearch.toUpperCase().charAt(0)))
+        {
+            searchArry.push(drink)
+        }
+  })
   console.log(searchArry);
-  searchCrit = searchArry.join('');
-  //console.log(searchCrit);
-
-  drinks.forEach(function(drink) {
-
-
-
-    // if (($userSearch.charAt(searchLength).toUpperCase() === drink.drinkName.charAt(searchLength).toUpperCase())) {
-    //   console.log(drink)
-    // }
-    console.log(searchLength)
-
-  });
-
-
   console.log($userSearch);
 });
