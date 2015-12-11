@@ -38,7 +38,7 @@
   font-family: 'Gochi Hand', cursive;
   font-size: 20px;
   border-radius: 15px;
-  background-color: rgba(0,0,0,.8);
+  background-color: rgba(0,0,0,.6);
 }
 
 .voteComplete{
@@ -46,6 +46,15 @@
   height: 200px;
   width: 160px;
 
+}
+.voteP{
+  color: white;
+  /*font-family: 'Gochi Hand', cursive;*/
+  font-size: 25px;
+  width:700px;
+  text-align: center;
+  border-radius: 15px;
+  background-color: rgba(0,0,0,.2);
 }
 
 p{
