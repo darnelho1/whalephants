@@ -89,7 +89,7 @@ $('#guess1').on('change', function(){
                 });
                 $('#usedLetters').text(array);
                 $('#guess1').val('');
-                var image = hangManImages[imageCounter];
+                var image = hangManImages[imageCounter]; // image finder
                 $hangImg.css({"background-image": "url(" + image + ")"});
                 imageCounter++;
                 if(imageCounter === 11){
