@@ -203,3 +203,8 @@ $('#soundcloud').mouseout(function(){
   $("#soundcloud").css('font-size', '1em');
   $('#soundcloud').css('text-decoration', 'none');
 });
+
+// add link to homepage from header logo
+$('#logo').on('click', function(){
+  window.open('../homePage/index.html', '_self');
+});
