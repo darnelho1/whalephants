@@ -28,7 +28,7 @@ var tracker = {
 //Drink Objects
 var martini = new Mixer('Martini','images/martini.jpg','Gin',['1/2 oz (1 part) Dry vermouth', '3 oz (6 parts) Gin'],'Preparation: Straight: Pour all ingredients into mixing glass with ice cubes. Stir well. Strain in chilled martini cocktail glass. Squeeze oil from lemon peel onto the drink, or garnish with olive.',['Olive','Lemon twist']);
 
-var manhattan = new Mixer('Manhatan','images/manhattan.jpg','Rye',[' 2 oz Rye Whisky', '1 oz Italian vermouth', '2 dashes Angostura bitters'],'Preparation: Pour all ingredients into mixing glass stir over ice, strained into a chilled glass, garnished, and served straight up.','Cherry');
+var manhattan = new Mixer('Manhattan','images/manhattan.jpg','Rye',[' 2 oz Rye Whisky', '1 oz Italian vermouth', '2 dashes Angostura bitters'],'Preparation: Pour all ingredients into mixing glass stir over ice, strained into a chilled glass, garnished, and served straight up.','Cherry');
 
 var mojito = new Mixer('Mojito','images/mojito.jpg','Rum',['1 1/2 oz White rum', '6 leaves of Mint', 'Soda Water', '1 oz Fresh lime juice', '2 teaspoons Sugar'],'Preparation: Mint sprigs muddled with sugar and lime juice. Rum added and topped with soda water. Garnished with sprig of mint leaves. Served with a straw.',['Sprig of mint', 'Yerba buena']);
 
@@ -170,3 +170,20 @@ function voteChart(){
     console.log('done');
   }
 }
+
+$searchBox = $('#searchBox');
+
+$searchBox.keyup(function(){
+
+  $userSearch = $searchBox.val();
+
+  drinks.forEach(function(drink) {
+    if (($userSearch.toUpperCase() === drink.drinkName.toUpperCase())) {
+      console.log(drink)
+    }
+
+  });
+
+
+  //console.log($userSearch);
+});

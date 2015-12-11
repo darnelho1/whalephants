@@ -62,10 +62,17 @@ p{
 }
 
 
+#searchBox{
+  margin-left: 450px;
+  width: 300px;
+  align-self: flex-end;
+}
+
+/*
 
 #drink4{
   background-size: 350px, 300px;
-}
+}*/
 
 article{
   display: flex;
