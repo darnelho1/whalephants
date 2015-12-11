@@ -1,5 +1,9 @@
 var used = []; // used letters
 var number = 0; // what word to generate
+var imageCounter = 0; // checks what image to put in
+// array of images for game
+var hangManImages = ['hangManImages/bmi1.jpg','hangManImages/bmi2.jpg','hangManImages/bmi3.jpg','hangManImages/bmi4.jpg','hangManImages/bmi5.jpg', 'hangManImages/bmi6.jpg', 'hangManImages/bmi7.jpg', 'hangManImages/bmi8.jpg', 'hangManImages/bmi9.jpg', 'hangManImages/bmi10.jpg', 'hangManImages/bmi11.jpg'];
+$hangImg = $('#hangImg');
 
 // picks what word to generate
 $(document).ready(function(){
@@ -85,6 +89,15 @@ $('#guess1').on('change', function(){
                 });
                 $('#usedLetters').text(array);
                 $('#guess1').val('');
+                $hangImg.css("background-image: url("hangManImages[imageCounter]");");
+                imageCounter++;
+                if(imageCounter === 10){
+                    $('#usedLetters').replaceWith('<p id="winner">Awww good try. Better Luck next time.</p>')
+                    $hangImg.css("-webkit-filter" "invert(0%)", 'filter' 'invert(0%)');
+                    $('p2').remove();
+                    $('#gal').remove();
+                    $('input').remove();
+                }
             }
       }
 });
@@ -135,6 +148,14 @@ $('#guess2').on('change', function(){
               });
               $('#usedLetters').text(array);
               $('#guess2').val('');
+              $hangImg.html("<img src="hangManImages[imageCounter]">");
+                imageCounter++;
+                if(imageCounter === 10){
+                    $('#usedLetters').replaceWith('<p id="winner">Awww good try. Better Luck next time.</p>')
+                    $('p2').remove();
+                    $('#gal').remove();
+                    $('input').remove();
+                }
             }
           }
       }
@@ -146,6 +167,7 @@ var finished2 = function(){
       $('p2').remove();
       $('#gal').remove();
       $('input').remove();
+
   }
 }
 
@@ -207,6 +229,14 @@ $('#guess3').on('change', function(){
               });
               $('#usedLetters').text(array);
               $('#guess3').val('');
+              $hangImg.html("<img src="hangManImages[imageCounter]">");
+                imageCounter++;
+                if(imageCounter === 10){
+                    $('#usedLetters').replaceWith('<p id="winner">Awww good try. Better Luck next time.</p>')
+                    $('p2').remove();
+                    $('#gal').remove();
+                    $('input').remove();
+                }
             }
           }
       }
