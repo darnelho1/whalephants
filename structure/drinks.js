@@ -1,6 +1,7 @@
 //object array for storing drinks
 
 var drinks = [];
+var drinkStore = [];
 var counter = 1;
 $imageId = $('#images');
 
@@ -17,6 +18,7 @@ var Mixer = function(drinkName,drinkImage,primaryLiqour,ingredients,recipe,garni
   this.drinkDay = '';
   this.drinkId = counter++;
       drinks.push(this);
+      drinkStore.push(this);
 }
 
 var tracker = {
@@ -172,12 +174,13 @@ function voteChart(){
 }
 
 $searchBox = $('#searchBox');
-searchArry = [];
 
 //event listner for search box
 $searchBox.keyup(function(){
   $userSearch = $searchBox.val();
   console.log($userSearch)
+  searchArry = [];
+
   //console.log(drinks)
 
 
@@ -185,8 +188,31 @@ $searchBox.keyup(function(){
     if ((drink.drinkName.toUpperCase().indexOf($userSearch.toUpperCase())> -1) && (drink.drinkName.toUpperCase().charAt(0) === $userSearch.toUpperCase().charAt(0)))
         {
             console.log(drink);
+            searchArry.push(drink);
         }
   })
+
+  drinks = [];
+  $imageId.html('')
+
+  searchArry.forEach(function(item){
+    drinks.push(item);
+  });
+
+  if ($userSearch.length < 1){
+    drinkStore.forEach(function(drink){
+      drinks.push(drink)
+
+    })
+    loadImages();
+    onMousover();
+  }
+
+  else{
+      loadImages();
+      onMousover();
+      console.log(drinks);
+  }
 
   //console.log(drinks);
   console.log($userSearch);

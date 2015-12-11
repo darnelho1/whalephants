@@ -68,6 +68,13 @@ p{
   align-self: flex-end;
 }
 
+#images{
+  display: flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  border: solid;
+  align-self:flex-start;
+}
 /*
 
 #drink4{
@@ -78,6 +85,7 @@ article{
   display: flex;
   flex-direction:row;
   flex-wrap:wrap;
+  align-items: flex-start;
   max-width: inherit;
   height: 1600px;
   background-size: 1600px, 800px;
