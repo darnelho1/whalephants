@@ -89,11 +89,14 @@ $('#guess1').on('change', function(){
                 });
                 $('#usedLetters').text(array);
                 $('#guess1').val('');
-                $hangImg.css("background-image: url("hangManImages[imageCounter]");");
+                var image = hangManImages[imageCounter];
+                $hangImg.css({"background-image": "url(" + image + ")"});
                 imageCounter++;
-                if(imageCounter === 10){
+                if(imageCounter === 11){
                     $('#usedLetters').replaceWith('<p id="winner">Awww good try. Better Luck next time.</p>')
-                    $hangImg.css("-webkit-filter" "invert(0%)", 'filter' 'invert(0%)');
+                    $hangImg.css({"-webkit-filter": "invert(0%)"});
+                    $hangImg.css({'filter': 'invert(0%)'});
+                    $hangImg.css('background-size', '300px 400px');
                     $('p2').remove();
                     $('#gal').remove();
                     $('input').remove();
@@ -105,6 +108,10 @@ $('#guess1').on('change', function(){
 var finished1 = function(){
   if (($('#letter1').length === 0) && ($('#letter2').length === 0) && ($('#letter3').length === 0) && ($('#letter4').length === 0)){
       $('#usedLetters').replaceWith('<p id="winner">You Got It. Nice Game!!!</p>')
+      $hangImg.css({"background-image": "url(" + hangManImages[10] + ")"});
+      $hangImg.css({"-webkit-filter": "invert(0%)"});
+      $hangImg.css({'filter': 'invert(0%)'});
+      $hangImg.css('background-size', '300px 400px');
       $('p2').remove();
       $('#gal').remove();
       $('input').remove();
@@ -148,10 +155,14 @@ $('#guess2').on('change', function(){
               });
               $('#usedLetters').text(array);
               $('#guess2').val('');
-              $hangImg.html("<img src="hangManImages[imageCounter]">");
+              var image = hangManImages[imageCounter];
+              $hangImg.css({"background-image": "url(" + image + ")"});
                 imageCounter++;
-                if(imageCounter === 10){
+                if(imageCounter === 11){
                     $('#usedLetters').replaceWith('<p id="winner">Awww good try. Better Luck next time.</p>')
+                    $hangImg.css({"-webkit-filter": "invert(0%)"});
+                    $hangImg.css({'filter': 'invert(0%)'});
+                    $hangImg.css('background-size', '300px 400px');
                     $('p2').remove();
                     $('#gal').remove();
                     $('input').remove();
@@ -164,6 +175,10 @@ $('#guess2').on('change', function(){
 var finished2 = function(){
   if (($('#playa1').length === 0) && ($('#playa2').length === 0) && ($('#playa3').length === 0) && ($('#playa4').length === 0) && ($('#playa5').length === 0)){
       $('#usedLetters').replaceWith('<p id="winner">You Got It. Nice Game!!!</p>')
+      $hangImg.css({"background-image": "url(" + hangManImages[10] + ")"});
+      $hangImg.css({"-webkit-filter": "invert(0%)"});
+      $hangImg.css({'filter': 'invert(0%)'});
+      $hangImg.css('background-size', '300px 400px');
       $('p2').remove();
       $('#gal').remove();
       $('input').remove();
@@ -229,10 +244,14 @@ $('#guess3').on('change', function(){
               });
               $('#usedLetters').text(array);
               $('#guess3').val('');
-              $hangImg.html("<img src="hangManImages[imageCounter]">");
+              var image = hangManImages[imageCounter];
+              $hangImg.css({"background-image": "url(" + image + ")"});
                 imageCounter++;
-                if(imageCounter === 10){
+                if(imageCounter === 11){
                     $('#usedLetters').replaceWith('<p id="winner">Awww good try. Better Luck next time.</p>')
+                    $hangImg.css({"-webkit-filter": "invert(0%)"});
+                    $hangImg.css({'filter': 'invert(0%)'});
+                    $hangImg.css('background-size', '300px 400px');
                     $('p2').remove();
                     $('#gal').remove();
                     $('input').remove();
@@ -245,6 +264,10 @@ $('#guess3').on('change', function(){
 var finished3 = function(){
   if (($('#bm1').length === 0) && ($('#bm2').length === 0) && ($('#bm3').length === 0) && ($('#bm4').length === 0) && ($('#bm5').length === 0) && ($('#bm6').length === 0) && ($('#bm6').length === 0) && ($('#bm7').length === 0) && ($('#bm8').length === 0) && ($('#bm9').length === 0) && ($('#bm10').length === 0)){
       $('#usedLetters').replaceWith('<p id="winner">You Got It. Nice Game!!!</p>')
+      $hangImg.css({"background-image": "url(" + hangManImages[10] + ")"});
+      $hangImg.css({"-webkit-filter": "invert(0%)"});
+      $hangImg.css({'filter': 'invert(0%)'});
+      $hangImg.css('background-size', '300px 400px');
       $('p2').remove();
       $('#gal').remove();
       $('input').remove();
