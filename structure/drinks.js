@@ -172,20 +172,24 @@ function voteChart(){
 }
 
 $searchBox = $('#searchBox');
-
+searchArry = [];
 
 //event listner for search box
 $searchBox.keyup(function(){
   $userSearch = $searchBox.val();
   console.log($userSearch)
-  searchArry = [];
+  //console.log(drinks)
+
 
   drinks.forEach(function(drink){
     if ((drink.drinkName.toUpperCase().indexOf($userSearch.toUpperCase())> -1) && (drink.drinkName.toUpperCase().charAt(0) === $userSearch.toUpperCase().charAt(0)))
         {
-            searchArry.push(drink)
+            console.log(drink);
         }
   })
-  console.log(searchArry);
+
+  //console.log(drinks);
   console.log($userSearch);
 });
+
+
