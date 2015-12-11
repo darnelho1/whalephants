@@ -32,7 +32,7 @@ var manhattan = new Mixer('Manhatan','images/manhattan.jpg','Rye',[' 2 oz Rye Wh
 
 var mojito = new Mixer('Mojito','images/mojito.jpg','Rum',['1 1/2 oz White rum', '6 leaves of Mint', 'Soda Water', '1 oz Fresh lime juice', '2 teaspoons Sugar'],'Preparation: Mint sprigs muddled with sugar and lime juice. Rum added and topped with soda water. Garnished with sprig of mint leaves. Served with a straw.',['Sprig of mint', 'Yerba buena']);
 
-var negroni = new Mixer('Negroni', 'images/negroni.jpg', 'Gin',['Vermouth','Campari'],'1 oz (1 part) Gin, 1 oz (1 part) Campari, 1 oz (1 part) Sweet red Vermouth','Preparation: Stir into glass over ice, garnish and serve.','Orange peel')
+var negroni = new Mixer('Negroni', 'images/negroni.jpg', ['Gin','Vermouth','Campari'],['1 oz (1 part) Gin', '1 oz (1 part) Campari', '1 oz (1 part) Sweet red Vermouth'],'Preparation: Stir into glass over ice, garnish and serve.','Orange peel')
 
 var margarita = new Mixer('Margarita','images/margarita.jpg','Tequila',['2 oz Tequila', '1 oz Lime juice', '1 oz Cointreau'],'Preparation: Rub the rim of the glass with the lime slice to make the salt stick to it. Shake the other ingredients with ice, then carefully pour into the glass (taking care not to dislodge any salt). Garnish and serve over ice.',['Lime slice', 'Salt on the rim']);
 
@@ -134,6 +134,15 @@ function radio_button_checker()
         console.log(tracker.votes);
         drinks[radio].drinkVotes++;
         console.log(drinks[radio])
+
+          drinks.forEach(function(drink){
+            $greyedDrink = $('#ingredients'+drink.drinkId);
+            //$greyedDrink.removeClass('ingredients')
+            $greyedDrink.addClass('voteComplete')
+            $('#button'+drink.drinkId).attr('disabled', true)
+            console.log($greyedDrink)
+            console.log('done');
+          })
 
       }
       //console.log(val);
