@@ -18,9 +18,14 @@ article{
 
 #hangImg{
   width: 300px;
-  height: 300px;
-  border: solid white;
+  height: 400px;
+  /*border: solid white;*/
   margin-top: 10px;
+  background-repeat: none;
+  background-size: 300px 300px;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+
 }
 
 .letter{
