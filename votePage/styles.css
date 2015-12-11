@@ -55,6 +55,7 @@
   text-align: center;
   border-radius: 15px;
   background-color: rgba(0,0,0,.2);
+/*  border: solid;*/
 }
 
 p{
@@ -63,7 +64,7 @@ p{
 
 
 #searchBox{
-  margin-left: 450px;
+  margin-left: 350px;
   width: 300px;
   align-self: flex-end;
 }
@@ -72,8 +73,15 @@ p{
   display: flex;
   flex-direction:row;
   flex-wrap:wrap;
-  border: solid;
+  /*border: solid;*/
   align-self:flex-start;
+}
+
+#voteCopy{
+  display: flex;
+/*  border: solid;*/
+  height: 210px;
+  align-items: flex-start;
 }
 /*
 
@@ -90,6 +98,7 @@ article{
   height: 1600px;
   background-size: 1600px, 800px;
   overflow-y: scroll;
+  /*border: solid;*/
 }
 
 aside{

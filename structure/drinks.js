@@ -175,47 +175,50 @@ function voteChart(){
 
 $searchBox = $('#searchBox');
 
-//event listner for search box
+//Search Box Function
 $searchBox.keyup(function(){
-  $userSearch = $searchBox.val();
-  console.log($userSearch)
-  searchArry = [];
+  //On Event create these variables
+  $userSearch = $searchBox.val(); //variable containing user search input
+  //console.log($userSearch)
+  searchArry = [];//array to hold matched drinks
+  //console.log(searchArry)
 
-  //console.log(drinks)
-
-
+  //Loop to find matched drink name in drink object array
   drinks.forEach(function(drink){
     if ((drink.drinkName.toUpperCase().indexOf($userSearch.toUpperCase())> -1) && (drink.drinkName.toUpperCase().charAt(0) === $userSearch.toUpperCase().charAt(0)))
         {
-            console.log(drink);
-            searchArry.push(drink);
+            //console.log(drink);
+            searchArry.push(drink);//push matched drinks to array
         }
   })
 
+  //clear out the current drink array and rendered html
   drinks = [];
   $imageId.html('')
 
+  //loop through matched drink array push drinks to drinks array
   searchArry.forEach(function(item){
     drinks.push(item);
   });
 
+  //check to see if user has cleared search box
   if ($userSearch.length < 1){
     drinkStore.forEach(function(drink){
-      drinks.push(drink)
+      drinks.push(drink) //push complete drink list to drinks array
 
     })
-    loadImages();
-    onMousover();
+    loadImages(); //re-render html to show drinks
+    onMousover(); //re-call mouse over listner
   }
 
   else{
-      loadImages();
-      onMousover();
-      console.log(drinks);
+      loadImages(); //re-render html to show drinks
+      onMousover();//re-call mouse over listner
+      //console.log(drinks);
   }
 
   //console.log(drinks);
-  console.log($userSearch);
+  //console.log($userSearch);
 });
 
 
