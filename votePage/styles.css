@@ -55,6 +55,7 @@
   text-align: center;
   border-radius: 15px;
   background-color: rgba(0,0,0,.2);
+/*  border: solid;*/
 }
 
 p{
@@ -62,19 +63,42 @@ p{
 }
 
 
+#searchBox{
+  margin-left: 350px;
+  width: 300px;
+  align-self: flex-end;
+}
+
+#images{
+  display: flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  /*border: solid;*/
+  align-self:flex-start;
+}
+
+#voteCopy{
+  display: flex;
+/*  border: solid;*/
+  height: 210px;
+  align-items: flex-start;
+}
+/*
 
 #drink4{
   background-size: 350px, 300px;
-}
+}*/
 
 article{
   display: flex;
   flex-direction:row;
   flex-wrap:wrap;
+  align-items: flex-start;
   max-width: inherit;
   height: 1600px;
   background-size: 1600px, 800px;
   overflow-y: scroll;
+  /*border: solid;*/
 }
 
 aside{

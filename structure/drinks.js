@@ -1,6 +1,7 @@
 //object array for storing drinks
 
 var drinks = [];
+var drinkStore = [];
 var counter = 1;
 $imageId = $('#images');
 
@@ -17,6 +18,7 @@ var Mixer = function(drinkName,drinkImage,primaryLiqour,ingredients,recipe,garni
   this.drinkDay = '';
   this.drinkId = counter++;
       drinks.push(this);
+      drinkStore.push(this);
 }
 
 var tracker = {
@@ -28,7 +30,7 @@ var tracker = {
 //Drink Objects
 var martini = new Mixer('Martini','images/martini.jpg','Gin',['1/2 oz (1 part) Dry vermouth', '3 oz (6 parts) Gin'],'Preparation: Straight: Pour all ingredients into mixing glass with ice cubes. Stir well. Strain in chilled martini cocktail glass. Squeeze oil from lemon peel onto the drink, or garnish with olive.',['Olive','Lemon twist']);
 
-var manhattan = new Mixer('Manhatan','images/manhattan.jpg','Rye',[' 2 oz Rye Whisky', '1 oz Italian vermouth', '2 dashes Angostura bitters'],'Preparation: Pour all ingredients into mixing glass stir over ice, strained into a chilled glass, garnished, and served straight up.','Cherry');
+var manhattan = new Mixer('Manhattan','images/manhattan.jpg','Rye',[' 2 oz Rye Whisky', '1 oz Italian vermouth', '2 dashes Angostura bitters'],'Preparation: Pour all ingredients into mixing glass stir over ice, strained into a chilled glass, garnished, and served straight up.','Cherry');
 
 var mojito = new Mixer('Mojito','images/mojito.jpg','Rum',['1 1/2 oz White rum', '6 leaves of Mint', 'Soda Water', '1 oz Fresh lime juice', '2 teaspoons Sugar'],'Preparation: Mint sprigs muddled with sugar and lime juice. Rum added and topped with soda water. Garnished with sprig of mint leaves. Served with a straw.',['Sprig of mint', 'Yerba buena']);
 
@@ -170,3 +172,53 @@ function voteChart(){
     console.log('done');
   }
 }
+
+$searchBox = $('#searchBox');
+
+//Search Box Function
+$searchBox.keyup(function(){
+  //On Event create these variables
+  $userSearch = $searchBox.val(); //variable containing user search input
+  //console.log($userSearch)
+  searchArry = [];//array to hold matched drinks
+  //console.log(searchArry)
+
+  //Loop to find matched drink name in drink object array
+  drinks.forEach(function(drink){
+    if ((drink.drinkName.toUpperCase().indexOf($userSearch.toUpperCase())> -1) && (drink.drinkName.toUpperCase().charAt(0) === $userSearch.toUpperCase().charAt(0)))
+        {
+            //console.log(drink);
+            searchArry.push(drink);//push matched drinks to array
+        }
+  })
+
+  //clear out the current drink array and rendered html
+  drinks = [];
+  $imageId.html('')
+
+  //loop through matched drink array push drinks to drinks array
+  searchArry.forEach(function(item){
+    drinks.push(item);
+  });
+
+  //check to see if user has cleared search box
+  if ($userSearch.length < 1){
+    drinkStore.forEach(function(drink){
+      drinks.push(drink) //push complete drink list to drinks array
+
+    })
+    loadImages(); //re-render html to show drinks
+    onMousover(); //re-call mouse over listner
+  }
+
+  else{
+      loadImages(); //re-render html to show drinks
+      onMousover();//re-call mouse over listner
+      //console.log(drinks);
+  }
+
+  //console.log(drinks);
+  //console.log($userSearch);
+});
+
+
