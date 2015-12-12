@@ -197,9 +197,11 @@ $searchBox.keyup(function(){
   $imageId.html('')
 
   //loop through matched drink array push drinks to drinks array
-  searchArry.forEach(function(item){
-    drinks.push(item);
-  });
+  // searchArry.forEach(function(item){
+  //   drinks.push(item);
+  // });
+
+  drinks = searchArry;
 
   //check to see if user has cleared search box
   if ($userSearch.length < 1){
