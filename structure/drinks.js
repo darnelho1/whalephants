@@ -1,9 +1,8 @@
-//object array for storing drinks
-
-var drinks = [];
+var drinks = []; //object array for storing drinks
 var drinkStore = [];
 var counter = 1;
 $imageId = $('#images');
+$searchBox = $('#searchBox');
 
 //Object constructor to create drink objects
 
@@ -110,25 +109,20 @@ onMousover();
 var bttnCounter = 0;
 
 //function to check if a drink has been voted on
-function radio_button_checker()
-{
+function radio_button_checker(){
   $(document).ready(function(){
     $radios = $(".radiobtn") ;
     //console.log($radios);
 
     $radios.each(function(radio, val){
-
       if (val.checked){
         //console.log(radio);
         //console.log(drinks[radio]);
         //tracker.votes.push(drinks[radio]);
         //console.log(tracker.votes);
         bttnCounter++
-        //voteChart();
-
-
+          //voteChart();
         console.log(bttnCounter);
-
       }
 
       if ((bttnCounter > 1) && val.checked){
@@ -137,29 +131,37 @@ function radio_button_checker()
         drinks[radio].drinkVotes++;
         console.log(drinks[radio])
 
-          drinks.forEach(function(drink){
-            $greyedDrink = $('#ingredients'+drink.drinkId);
-            //$greyedDrink.removeClass('ingredients')
-            $greyedDrink.addClass('voteComplete')
-            $('#button'+drink.drinkId).attr('disabled', true)
-            console.log($greyedDrink)
-            console.log('done');
-          })
-
+        drinks.forEach(function(drink){
+          $greyedDrink = $('#ingredients'+drink.drinkId);
+          //$greyedDrink.removeClass('ingredients')
+          $greyedDrink.addClass('voteComplete')
+          $('#button'+drink.drinkId).attr('disabled', true)
+          //console.log($greyedDrink)
+          //console.log('done');
+        })
       }
       //console.log(val);
-  });
+    });
+
+    // if (tracker.votes.length > 0){
+    //   drinks.forEach(function(drink){
+    //     $('#button'+drink.drinkId).attr('disabled', true)
+    //   })
+    // }
     //console.log(bttnCounter);
   });
 
 };
 //listener for button clicks
 
+function buttonListner(){
 $(document).ready(function(){
   $(".button-p").click(function(){
       radio_button_checker();
       })
 });
+}
+buttonListner();
 
 
 function voteChart(){
@@ -172,8 +174,6 @@ function voteChart(){
     console.log('done');
   }
 }
-
-$searchBox = $('#searchBox');
 
 //Search Box Function
 $searchBox.keyup(function(){
@@ -209,11 +209,13 @@ $searchBox.keyup(function(){
     })
     loadImages(); //re-render html to show drinks
     onMousover(); //re-call mouse over listner
+    buttonListner();
   }
 
   else{
       loadImages(); //re-render html to show drinks
       onMousover();//re-call mouse over listner
+      buttonListner();
       //console.log(drinks);
   }
 
