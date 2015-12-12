@@ -34,3 +34,26 @@ $submitClick = $('#submitForm').on('click', function(){
 		$('#validateP').html('<p>Please fill ALL required fields!</p>')
 	}
 });
+
+// Rating
+$(function(){
+	var rateDiv = $('#rateDiv');
+	var heartBlank = '<img class="hearts" src="images/campStars_blank.jpg">'
+	rateDiv.append(heartBlank);
+	rateDiv.append(heartBlank);
+	rateDiv.append(heartBlank);
+	rateDiv.append(heartBlank);
+	rateDiv.append(heartBlank);
+});
+
+$('#rateDiv').mouseover(function(){
+	$('img').attr('src','images/campStars_hover.jpg')
+});
+
+$('#rateDiv').mouseout(function(){
+	$('img').attr('src','images/campStars_blank.jpg')
+})
+
+
+
+
