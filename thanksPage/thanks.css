@@ -1,0 +1,13 @@
+.articleThanks {
+	justify-content: flex-start;
+}
+
+.thanksH {
+	color: white;
+	font-size: 2em;
+}
+
+.thanksP {
+	color: white;
+	width: 700px;
+}
