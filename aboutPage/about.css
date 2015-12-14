@@ -1,27 +1,75 @@
 #title{
   font-family: 'Pacifico', cursive;
-  font-size: 4em;
+  font-size: 3em;
   color: white;
+  margin-top:8px;
 }
 
 p3{
   font-family: 'Indie Flower', cursive;
   font-size: 1.3em;
   color: white;
-  width: 700px;
-  margin-bottom: 20px;
+  width: 650px;
 }
 article{
   overflow: scroll;
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    align-items: center;
 }
 
 img{
-  width: 300px;
-  height: 300px;
   border:solid white;
-  border-width: 2px 2px 10px 2px;
+  border-width: 2px 2px 20px 2px;
+  margin-left: 20px;
 }
+
+
+.InnerSec{
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: space-between;
+    -webkit-align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    width: 90%;
+}
+
+#cornerTime{
+  height: 600px;
+}
+
+#drinkTime{
+  height: 800px;
+}
+#moopTime{
+  display: -webkit-flex;
+    -webkit-flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    -webkit-align-self: flex-start;
+    align-self: flex-start;
+    width: 700px;
+    padding-left: 45px;
+}
+
 #moopImg{
-  height: 100px;
-  width: 600px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: -5px;
+}
+
+.sideImg{
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+}
+
+a{
+  color: white;
 }
