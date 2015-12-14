@@ -1,4 +1,5 @@
 var used = []; // used letters
+var checkLetter = []; // all letters guessed
 var number = 0; // what word to generate
 var imageCounter = 0; // checks what image to put in
 // array of images for game
@@ -46,17 +47,20 @@ $(document).ready(function(){
     }
 });
 
-
-// var check = used.forEach(function(u){
-//         if ($guess1 === u){
-//         alert("You've already tried that letter.");
-//         }
-//     });
-
 //// show word function
 $('#guess1').on('change', function(){
   $guess1 = $('#guess1').val().toLowerCase();
-        if(number === 1){
+  var checker = false;
+checkLetter.forEach(function(u){
+      if ($guess1 === u){
+        alert("You've already tried that letter.");
+        $('#guess1').val('');
+        checker = true;
+      }
+});
+
+if (checker === false){
+      if(number === 1){
             if($guess1.length > 1){
                 alert('Please guess only one letter at a time');
                 $('#guess1').val('');
@@ -64,25 +68,30 @@ $('#guess1').on('change', function(){
             else if($guess1 === 's'){
                 $('#letter1').replaceWith('<p>s</p>');
                 $('#guess1').val('');
+                checkLetter.push($guess1);
                 finished1();
             }
             else if($guess1 === 'h'){
                 $('#letter2').replaceWith('<p>h</p>');
                 $('#guess1').val('');
+                checkLetter.push($guess1);
                 finished1();
             }
             else if($guess1 === 'o'){
                 $('#letter3').replaceWith('<p>o</p>');
                 $('#guess1').val('');
+                checkLetter.push($guess1);
                 finished1();
             }
             else if($guess1 === 'w'){
                 $('#letter4').replaceWith('<p>w</p>');
                 $('#guess1').val('');
+                checkLetter.push($guess1);
                 finished1();
             }
             else{
                 used.push($guess1);
+                checkLetter.push($guess1);
                 var array = used.map(function(l){
                 var f = ' ' + l;
                 return  f;
@@ -103,8 +112,8 @@ $('#guess1').on('change', function(){
                 }
             }
       }
+}
 });
-
 var finished1 = function(){
   if (($('#letter1').length === 0) && ($('#letter2').length === 0) && ($('#letter3').length === 0) && ($('#letter4').length === 0)){
       $('#usedLetters').replaceWith('<p id="winner">You Got It. Nice Game!!!</p>')
@@ -120,6 +129,16 @@ var finished1 = function(){
 
 $('#guess2').on('change', function(){
   $guess2 = $('#guess2').val().toLowerCase();
+  var checker = false;
+  checkLetter.forEach(function(u){
+      if ($guess2 === u){
+        alert("You've already tried that letter.");
+        $('#guess2').val('');
+        checker = true;
+      }
+});
+
+if (checker === false){
       if(number === 2){
           if($guess2.length > 1){
             alert('Please guess only one letter at a time');
@@ -129,26 +148,31 @@ $('#guess2').on('change', function(){
             if($guess2 === 'p'){
               $('#playa1').replaceWith('<p>p</p>');
               $('#guess2').val('');
+              checkLetter.push($guess2);
               finished2();
             }
             else if($guess2 === 'l'){
               $('#playa2').replaceWith('<p>l</p>');
               $('#guess2').val('');
+              checkLetter.push($guess2);
               finished2();
             }
             else if($guess2 === 'a'){
               $('#playa3').replaceWith('<p>a</p>');
               $('#playa5').replaceWith('<p>a</p>');
               $('#guess2').val('');
+              checkLetter.push($guess2);
               finished2();
             }
             else if($guess2 === 'y'){
               $('#playa4').replaceWith('<p>y</p>');
               $('#guess2').val('');
+              checkLetter.push($guess2);
               finished2();
             }
             else{
               used.push($guess2);
+              checkLetter.push($guess2);
               var array = used.map(function(l){
                 var f = ' ' + l;
                 return  f;
@@ -170,6 +194,7 @@ $('#guess2').on('change', function(){
             }
           }
       }
+  }
 });
 
 var finished2 = function(){
@@ -188,6 +213,16 @@ var finished2 = function(){
 
 $('#guess3').on('change', function(){
   $guess3 = $('#guess3').val().toLowerCase();
+  var checker = false;
+  checkLetter.forEach(function(u){
+      if ($guess3 === u){
+        alert("You've already tried that letter.");
+        $('#guess3').val('');
+        checker = true;
+      }
+});
+
+  if (checker === false){
       if(number === 3){
           if($guess3.length > 1){
             alert('Please guess only one letter at a time');
@@ -197,16 +232,19 @@ $('#guess3').on('change', function(){
             if($guess3 === 'b'){
               $('#bm1').replaceWith('<p>b</p>');
               $('#guess3').val('');
+              checkLetter.push($guess3);
               finished3();
             }
             else if($guess3 === 'u'){
               $('#bm2').replaceWith('<p>u</p>');
               $('#guess3').val('');
+              checkLetter.push($guess3);
               finished3();
             }
             else if($guess3 === 'r'){
               $('#bm3').replaceWith('<p>r</p>');
               $('#guess3').val('');
+              checkLetter.push($guess3);
               finished3();
             }
             else if($guess3 === 'n'){
@@ -214,30 +252,36 @@ $('#guess3').on('change', function(){
               $('#bm6').replaceWith('<p>n</p>');
               $('#bm10').replaceWith('<p>n</p>');
               $('#guess3').val('');
+              checkLetter.push($guess3);
               finished3();
             }
             else if($guess3 === 'i'){
               $('#bm5').replaceWith('<p>i</p>');
               $('#guess3').val('');
+              checkLetter.push($guess3);
               finished3();
             }
             else if($guess3 === 'g'){
               $('#bm7').replaceWith('<p>g</p>');
               $('#guess3').val('');
+              checkLetter.push($guess3);
               finished3();
             }
             else if($guess3 === 'm'){
               $('#bm8').replaceWith('<p>m</p>');
               $('#guess3').val('');
+              checkLetter.push($guess3);
               finished3();
             }
             else if($guess3 === 'a'){
               $('#bm9').replaceWith('<p>a</p>');
               $('#guess3').val('');
+              checkLetter.push($guess3);
               finished3();
             }
             else{
               used.push($guess3);
+              checkLetter.push($guess3);
               var array = used.map(function(l){
                 var f = ' ' + l;
                 return  f;
@@ -259,6 +303,7 @@ $('#guess3').on('change', function(){
             }
           }
       }
+  }
 });
 
 var finished3 = function(){

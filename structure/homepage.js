@@ -3,14 +3,14 @@ $('#home').on('click', function(){
   window.open('../homePage/index.html', '_self');
 });
 $('#home').mouseover(function(){
-    $("#home").css('font-size', '1.3em');
-    $("#home").css('width', '100px');
-    $('#home').css('height', '30px');
+    $("#home").css('font-size', '1.03em');
+    $("#home").css('box-shadow', '3px 3px 10px rgb(255, 230, 163)');
+    $('#home').css('color', 'rgb(255, 230, 163)');
   });
 $('#home').mouseout(function(){
   $("#home").css('font-size', '1em');
-    $("#home").css('width', '90px');
-    $('#home').css('height', '25px');
+    $("#home").css('box-shadow', '2px 2px 10px #888888');
+    $('#home').css('color', 'white');
 });
 
 // About button effects and likes
@@ -18,14 +18,14 @@ $('#aboutUs').on('click', function(){
   window.open('../aboutPage/about.html', '_self');
 });
 $('#aboutUs').mouseover(function(){
-    $("#aboutUs").css('font-size', '1.3em');
-    $("#aboutUs").css('width', '100px');
-    $('#aboutUs').css('height', '30px');
+    $("#aboutUs").css('font-size', '1.03em');
+    $("#aboutUs").css('box-shadow', '3px 3px 10px rgb(255, 230, 163)');
+    $('#aboutUs').css('color', 'rgb(255, 230, 163)');
   });
 $('#aboutUs').mouseout(function(){
   $("#aboutUs").css('font-size', '1em');
-    $("#aboutUs").css('width', '90px');
-    $('#aboutUs').css('height', '25px');
+    $("#aboutUs").css('box-shadow', '2px 2px 10px #888888');
+    $('#aboutUs').css('color', 'white');
 });
 
 // Vote button effects and Links
@@ -33,28 +33,28 @@ $('#vote').on('click', function(){
   window.open('../votePage/vote.html', '_self');
 });
 $('#vote').mouseover(function(){
-    $("#vote").css('font-size', '1.3em');
-    $("#vote").css('width', '100px');
-    $('#vote').css('height', '30px');
+    $("#vote").css('font-size', '1.03em');
+    $("#vote").css('box-shadow', '3px 3px 10px rgb(255, 230, 163)');
+    $('#vote').css('color', 'rgb(255, 230, 163)');
   });
 $('#vote').mouseout(function(){
   $("#vote").css('font-size', '1em');
-    $("#vote").css('width', '90px');
-    $('#vote').css('height', '25px');
+    $("#vote").css('box-shadow', '2px 2px 10px #888888');
+    $('#vote').css('color', 'white');
 });
 // Count Down effects and links
 $('#countDown').on('click', function(){
   window.open('../countDownPage/countDown.html', '_self');
 });
 $('#countDown').mouseover(function(){
-    $("#countDown").css('font-size', '1em');
-    $("#countDown").css('width', '100px');
-    $('#countDown').css('height', '30px');
+    $("#countDown").css('font-size', '1.03em');
+    $("#countDown").css('box-shadow', '3px 3px 10px rgb(255, 230, 163)');
+    $('#countDown').css('color', 'rgb(255, 230, 163)');
   });
 $('#countDown').mouseout(function(){
-  $("#countDown").css('font-size', '.9em');
-    $("#countDown").css('width', '90px');
-    $('#countDown').css('height', '25px');
+  $("#countDown").css('font-size', '1em');
+    $("#countDown").css('box-shadow', '2px 2px 10px #888888');
+    $('#countDown').css('color', 'white');
 });
 
 // Contact Us effects and links
@@ -62,29 +62,30 @@ $('#contactUs').on('click', function(){
   window.open('../contactPage/contactUs.html', '_self');
 });
 $('#contactUs').mouseover(function(){
-    $("#contactUs").css('font-size', '1.1em');
-    $("#contactUs").css('width', '100px');
-    $('#contactUs').css('height', '30px');
+    $("#contactUs").css('font-size', '1.03em');
+    $("#contactUs").css('box-shadow', '3px 3px 10px rgb(255, 230, 163)');
+    $('#contactUs').css('color', 'rgb(255, 230, 163)');
   });
 $('#contactUs').mouseout(function(){
-  $("#contactUs").css('font-size', '.9em');
-    $("#contactUs").css('width', '90px');
-    $('#contactUs').css('height', '25px');
+  $("#contactUs").css('font-size', '1em');
+    $("#contactUs").css('box-shadow', '2px 2px 10px #888888');
+    $('#contactUs').css('color', 'white');
 });
 
 // Game effects and links
 $('#game').on('click', function(){
   window.open('../gamePage/game.html', '_self');
 });
+
 $('#game').mouseover(function(){
-    $("#game").css('font-size', '1.3em');
-    $("#game").css('width', '100px');
-    $('#game').css('height', '30px');
+    $("#game").css('font-size', '1.03em');
+    $("#game").css('box-shadow', '3px 3px 10px rgb(255, 230, 163)');
+    $('#game').css('color', 'rgb(255, 230, 163)');
   });
 $('#game').mouseout(function(){
   $("#game").css('font-size', '1em');
-    $("#game").css('width', '90px');
-    $('#game').css('height', '25px');
+    $("#game").css('box-shadow', '2px 2px 10px #888888');
+    $('#game').css('color', 'white');
 });
 
 // homefooter effects and links
@@ -204,7 +205,33 @@ $('#soundcloud').mouseout(function(){
   $('#soundcloud').css('text-decoration', 'none');
 });
 
-// add link to homepage from header logo
-$('#logo').on('click', function(){
-  window.open('../homePage/index.html', '_self');
-});
+var timeOut = function(){
+  $("aside").css('z-index', '-1');
+  hidden = true;
+};
+
+var hidden = false;
+    $('#logo').click(function(){
+      if(hidden === false){
+          $("aside").animate({'opacity': 0});
+          window.setTimeout(timeOut, 500);
+
+      }
+      else if(hidden !== false){
+        $("aside").css('z-index', '1');
+        $("aside").animate({'opacity': 1});
+        hidden = false;
+      }
+  });
+
+$(window).scroll(function(){
+    $("aside").css("opacity", 1 - $(window).scrollTop() / 100);
+      if(hidden === false){
+        if((1 - $(window).scrollTop() / 100) < -0.040000000000000036){
+           $("aside").css('z-index', '-1');
+        }
+        else{
+          $("aside").css('z-index', '1');
+        }
+      }
+  });
