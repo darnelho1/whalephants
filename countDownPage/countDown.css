@@ -103,13 +103,25 @@ p{
 }
 
 #kids{
+  margin-top: 50px;
   width: 200px;
   height: 200px;
-  margin-left: 20px;
   cursor: pointer;
-  /*margin-left: 60px;*/
   -webkit-transform: rotate(-20deg);
   transform: rotate(-20deg);
+  border: solid white;
+  border-width: 5px 5px 20px 5px;
+}
+
+#robot{
+  margin-top: 20px;
+  margin-bottom: 100px;
+  margin-right: 10px;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  -webkit-transform: rotate(8deg);
+  transform: rotate(8deg);
   border: solid white;
   border-width: 5px 5px 20px 5px;
 }
@@ -117,7 +129,7 @@ p{
 #top{
   display: -webkit-flex;
   -webkit-flex-direction: row;
-  -webkit-justify-content: center;
+  -webkit-justify-content: space-between;
   -webkit-align-items: center;
   display: flex;
   flex-direction: row;
@@ -127,21 +139,22 @@ p{
 #welcome{
     font-family: 'Gochi Hand', cursive;
     color: white;
+    width:230px;
     font-size: 2em;
-    -webkit-transform: rotate(-60deg);
-    transform: rotate(-60deg);
-    cursor: default;
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+    cursor: pointer;
     margin-bottom: 100px;
+    margin-top: 100px;
 }
 
 #drink{
     font-family: 'Gochi Hand', cursive;
     color: white;
-    /*margin-right: 40px;*/
     font-size: 2em;
-    -webkit-transform: rotate(40deg);
-    transform: rotate(40deg);
-    cursor: default;
+    -webkit-transform: rotate(25deg);
+    transform: rotate(25deg);
+    cursor: pointer;
 }
 
 #time{
@@ -200,6 +213,8 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-right: 30px;
+    margin-left: 0;
 }
 
 #midCha{
@@ -212,7 +227,7 @@ p{
     justify-content: center;
     align-items: center;
     margin-left: 40px;
-    margin-right: 40px;
+    margin-right: 10px;
 }
 
 #rightCha{
@@ -224,4 +239,5 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /*margin-left: 5%;*/
 }

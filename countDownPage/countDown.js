@@ -48,3 +48,7 @@ $('#drink').on('click', function(){
 $('#welcome').on('click', function(){
   window.open('http://tickets.burningman.org', '_blank')
 });
+
+$('#robot').on('click', function(){
+   window.open('./countDownImage/robot.jpg', '_blank');
+});
