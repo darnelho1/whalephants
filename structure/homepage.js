@@ -76,6 +76,7 @@ $('#contactUs').mouseout(function(){
 $('#game').on('click', function(){
   window.open('../gamePage/game.html', '_self');
 });
+
 $('#game').mouseover(function(){
     $("#game").css('font-size', '1.03em');
     $("#game").css('box-shadow', '3px 3px 10px rgb(255, 230, 163)');
@@ -204,24 +205,33 @@ $('#soundcloud').mouseout(function(){
   $('#soundcloud').css('text-decoration', 'none');
 });
 
-// $(window).scroll(function() {
-//     if ($(this).scrollTop()>0){
+var timeOut = function(){
+  $("aside").css('z-index', '-1');
+  hidden = true;
+};
 
-//             $('aside').animate({
-//             height: "0%",
-//             opacity: 0,
-//             "z-index": '-1',
-//           });
-//     }
-// });
+var hidden = false;
+    $('#logo').click(function(){
+      if(hidden === false){
+          $("aside").animate({'opacity': 0});
+          window.setTimeout(timeOut, 500);
 
-// $(window).scroll(function() {
-//     if ($(this).scrollTop()>1){
-//           $('aside').animate({
-//             height: "400px",
-//             opacity: 1,
-//             "z-index": '1',
-//           });
-//      $("aside").stop();
-//      }
-// });
+      }
+      else if(hidden !== false){
+        $("aside").css('z-index', '1');
+        $("aside").animate({'opacity': 1});
+        hidden = false;
+      }
+  });
+
+$(window).scroll(function(){
+    $("aside").css("opacity", 1 - $(window).scrollTop() / 100);
+      if(hidden === false){
+        if((1 - $(window).scrollTop() / 100) < -0.040000000000000036){
+           $("aside").css('z-index', '-1');
+        }
+        else{
+          $("aside").css('z-index', '1');
+        }
+      }
+  });
