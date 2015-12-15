@@ -88,6 +88,21 @@ $('#game').mouseout(function(){
     $('#game').css('color', 'white');
 });
 
+// Thanks button effects and links
+$('#thankYou').on('click', function(){
+  window.open('../thanksPage/thanks.html', '_self');
+});
+$('#thankYou').mouseover(function(){
+    $("#thankYou").css('font-size', '1.03em');
+    $("#thankYou").css('box-shadow', '3px 3px 10px rgb(255, 230, 163)');
+    $('#thankYou').css('color', 'rgb(255, 230, 163)');
+  });
+$('#thankYou').mouseout(function(){
+  $("#thankYou").css('font-size', '1em');
+    $("#thankYou").css('box-shadow', '2px 2px 10px #888888');
+    $('#thankYou').css('color', 'white');
+});
+
 // homefooter effects and links
 $('#homeFooter').on('click', function(){
   window.open('../homePage/index.html', '_self');
