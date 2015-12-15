@@ -6,27 +6,29 @@
   <link rel="stylesheet" type="text/css" href="../structure/homePage.css">
   <link href='https://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <link rel="stylesheet" type="text/css" href="./votestyles.css">
 </head>
       <body>
-      <header>
-      <img src="../structure/homeImages/logo.jpg" id = 'logo'>
+      <header class ='width'>
+      <!-- <img src="../structure/homeImages/logo.jpg" id = 'logo'> -->
       <h1>Whalephants</h1>
       </header>
-      <section>
-            <aside>
-                <ul>
-                  <li class= 'nav' id ='home'>Home</li>
-                  <li class= 'nav' id = 'aboutUs'>About</li>
-                  <li class= 'nav' id ='vote'>Vote</li>
-                  <li class= 'nav' id = 'countDown'>Count Down</li>
-                  <li class= 'nav' id ='contactUs'>Contact Us</li>
-                  <li class= 'nav' id ='game'>Hang Man</li>
-                </ul>
 
+      <section id='voteSection' class ='width'>
+      <div id='bar'>
+           <img src="../structure/homeImages/logo.jpg" id = 'logo' class='fade'>
+           <aside>
+              <ul>
+                <li class= 'nav' id ='home'>Home</li>
+                <li class= 'nav' id = 'aboutUs'>About</li>
+                <li class= 'nav' id ='vote'>Vote</li>
+                <li class= 'nav' id = 'countDown'>Count Down</li>
+                <li class= 'nav' id ='contactUs'>Contact Us</li>
+                <li class= 'nav' id ='game'>Hang Man</li>
+              </ul>
             </aside>
-            <article>
-            <input id='searchBox' type="search" placeholder="Find A Drink">
+        </div>
+
             <div id = 'voteCopy'>
                <br></br>
                <p class="voteP">
@@ -35,6 +37,10 @@
                 Below you can vote on two drinks and if one of your selections is in the top 7 it will be one of our featured drinks during the week
                 </p>
             </div>
+
+            <article id ='contentSection' >
+
+            <input id='searchBox' type="search" placeholder="Find A Drink">
             <div id ='images'>
 
             </div>
@@ -47,7 +53,7 @@
 
             </article>
       </section>
-      <footer>
+      <footer class='width' >
           <div id='footerBar'>
               <div class ='footerNav'>
                 <ul class = 'bottomList'>
