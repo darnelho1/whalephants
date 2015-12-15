@@ -29,7 +29,7 @@ $submitClick = $('#submitForm').on('click', function(){
 	$('form').remove();
 	$('button').remove();
 	$('#messageSent').html('Your message has been sent!<br></br>We will reply as soon as we can.</p>')
-	
+
 	}else {
 		$('#validateP').html('<p>Please fill ALL required fields!</p>')
 	}
@@ -139,3 +139,4 @@ $('#r5').on('click', function(){
 	avgRating();
 	console.log(Rater);
 });
+
