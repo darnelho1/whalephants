@@ -5,6 +5,8 @@
   <link rel="stylesheet" type="text/css" href="../structure/homePage.css">
   <link href='https://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="thanks.css">
 </head>
       <body>
       <header class='width'>
@@ -22,13 +24,20 @@
                   <li class= 'nav' id = 'countDown'>Count Down</li>
                   <li class= 'nav' id ='contactUs'>Contact Us</li>
                   <li class= 'nav' id ='game'>Hang Man</li>
+                  <li class= 'nav' id ='game'>Thank You</li>
                 </ul>
               </aside>
           </div>
-            <article>
+            <article class="articleThanks">
+                <h2 class="thanksH">Thank you!</h2>
+                <p class="thanksP">There's nothing complicated here. All we want to do is say THANKS to the whole Burning Man community and to everyone who makes it possible. Without this beloved event, we would be without so many awesome memories - experiences that have kept us in the moment and provided us with tools for our daily lives.</p>
+                <p class="thanksP"> We also want to thank everyone involved with the Whalephants camp! There are no adequate words to convey our feelings about this ol' camp and its annual devotees. Countless people have made it reality and continue making improvements every year. And if you are new to Whalephants, know it is the result of years worth of work!</p>
 
-
-
+                <p id="thanksP" class="thanksP">If you would like to say thanks to the Whalephants crew and your fellow campers, write your name and hit 'post'! The support is always motivating. Happy camping!</p>
+                <input id="thanksIn" type="text" name="thanks" placeholder="Sign Name Here"></input>
+                <button id="sigButton" class="sigButton">add me</button>
+                <h2 class="thanksH">Whalephants Campers</h2>
+                <div id="thanksDiv"></div>
 
 
 
@@ -66,6 +75,7 @@
       </footer>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js'></script>
+<script src="thanks.js"></script>
 <script src="../structure/homepage.js"></script>
 </body>
 </html>
