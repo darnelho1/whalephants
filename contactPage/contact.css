@@ -169,3 +169,26 @@ span {
 	border-radius: 0 0 5px 5px;
 
 }
+
+/*CAMP RATING*/
+.rateTitle {
+	color: white;
+	font-size: 2em;
+}
+
+.ratings {
+	display: flex;
+	flex-direction: column;
+}
+
+.rateHearts {
+	display: flex;
+	flex-direction: row;
+	width: 200px;
+	justify-content: space-around;
+}
+
+.hearts {
+	border:solid white;
+}
+

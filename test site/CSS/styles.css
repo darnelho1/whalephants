@@ -1,0 +1,125 @@
+body{
+  display: flex;
+  flex-direction:column;
+  /*border: solid;*/
+  height: 100%;
+  width: 95%;
+  margin-left:2.5%;
+
+}
+
+#banner{
+  display: flex;
+  flex-direction:row;
+  /*justify-content:flex-end;*/
+  background-image: url('../images/playa.jpg');
+  color: black;
+  font-size: 75px;
+  font-weight: bold;
+  font-family: 'Black Ops One', cursive;
+  height: 200px;
+  width: 100%;
+  /*border: solid;*/
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 5px;
+  /*border-top:solid;
+  border-right: solid;
+  border-left: solid;
+  border-color: orange;
+  border-width: 1px;*/
+
+
+}
+
+#headerTitle{
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+#logo{
+  background-image: url('../images/logo.jpg');
+  position: relative;
+  bottom: 80px;
+  z-index: 1;
+  margin-left: 50px;
+  height: 150px;
+  width: 150px;
+  border: solid;
+  border-color: white;
+  border-radius: 75px;
+  /*border: solid;*/
+  background-size: cover;
+
+}
+
+#background{
+  background-image: url('../images/chalkboard.jpg');
+  height: 1000px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 160px;
+  width: 100%;
+}
+
+
+
+#navBar{
+  height: 750px;
+  width: 250px;
+  margin-left: 25px;
+  position: relative;
+  bottom: 1160px;
+  background-color: purple;
+  border-bottom: solid;
+  border-right: solid;
+  border-right-color: orange;
+  border-bottom-width: 5px;
+  border-bottom-color: orange;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+/*  border: solid;*/
+}
+
+#navBar li{
+  position: relative;
+  right: 40px;
+  width: 250px;
+  /*border-top:solid;
+  border-top-color: orange;*/
+  border-bottom: solid;
+  border-bottom-color: orange;
+  list-style-type:none;
+  /*border: solid;*/
+
+}
+
+#navItems{
+  color: white;
+  text-indent: 25px;
+  font-size: 25px;
+  display: flex;
+  flex-direction:column;
+  height: 390px;
+  justify-content:space-around;
+  margin-top: 90px;
+  /*border:solid;*/
+}
+
+#content{
+  display: flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  overflow-y: scroll;
+  position: relative;
+  bottom: 1815px;
+  left: 290px;
+  /*border:solid;*/
+  height: 800px;
+  width: 83%;
+}
+
+#searchField{
+  border:solid;
+}
