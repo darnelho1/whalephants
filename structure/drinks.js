@@ -184,7 +184,9 @@ $searchBox.keyup(function(){
   searchArry = [];//array to hold matched drinks
   //console.log(searchArry)
 
-  //Loop to find matched drink name in drink object array
+  //Loop to find matched drink/primary liqour/ingredients name in drink object array
+
+  //drink loop
   drinks.forEach(function(drink){
     if ((drink.drinkName.toUpperCase().indexOf($userSearch.toUpperCase())> -1) && (drink.drinkName.toUpperCase().charAt(0) === $userSearch.toUpperCase().charAt(0)))
         {
@@ -192,15 +194,30 @@ $searchBox.keyup(function(){
             searchArry.push(drink);//push matched drinks to array
         }
 
+    //primaryLiqour loop
     drink.primaryLiqour.forEach(function(item){
       if ((item.toUpperCase().indexOf($userSearch.toUpperCase())>-1) && (item.toUpperCase().charAt(0) === $userSearch.toUpperCase().charAt(0)))
         {
-          console.log(drink)
           searchArry.push(drink);
-
         }
 
     })
+
+    //ingredients loop
+
+    // drink.ingredients.forEach(function(item){
+    //   if((item.toUpperCase().indexOf($userSearch.toUpperCase()) > -1) &&
+    //     (item.toUpperCase().charAt(0) === $userSearch.toUpperCase().charAt(0)))
+    //     {
+    //       searchArry.forEach(function(item){
+    //         if (item != drink) {
+    //           searchArry.push(drink);
+    //         }
+    //       })
+    //     }
+
+    // })
+
 
   })
 
@@ -208,12 +225,15 @@ $searchBox.keyup(function(){
   drinks = [];
   $imageId.html('')
 
-  //loop through matched drink array push drinks to drinks array
-  // searchArry.forEach(function(item){
-  //   drinks.push(item);
-  // });
+  //push results from search array to the drinks array
 
-  drinks = searchArry;
+  $.each(searchArry, function(i, val){
+    if($.inArray(val, drinks) === -1){
+      drinks.push(val)
+    }
+  })
+  // drinks = searchArry;
+  console.log(drinks);
 
   //check to see if user has cleared search box
   if ($userSearch.length < 1){
