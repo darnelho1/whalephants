@@ -1,3 +1,7 @@
+var wordsPlayed = [];
+var gamesPlayed = 0;
+var game = function(){
+  gamesPlayed += 1;
 var used = []; // used letters
 var checkLetter = []; // all letters guessed
 var number = 0; // what word to generate
@@ -7,8 +11,28 @@ var hangManImages = ['hangManImages/bmi1.jpg','hangManImages/bmi2.jpg','hangManI
 $hangImg = $('#hangImg');
 
 // picks what word to generate
-$(document).ready(function(){
+    var play = function(){
+      var used = false;
+      if(gamesPlayed === 4){
+      $('article').html("<p id='gal'>Thank you for playing all the words!</p><video hight='400px' width='400px' autoplay> <source src='./hangManImages/finalWin.mov'>");
+      $('#gal').css('width', '600px');
+      $('#gal').css('margin-bottom', '0')
+      $('video').css('margin-top', '0');
+      $("video").prop("volume", 0.3);
+      }
+      else{
+        console.log(gamesPlayed);
     number = Math.floor(Math.random() * 3) + 1;
+    wordsPlayed.forEach(function(g){
+         if(number === g){
+          used = true;
+         }
+    });
+    if(used === true){
+      play();
+    }
+    else{
+    wordsPlayed.push(number);
     // word show
     if(number === 1){
       // letter boxes for word
@@ -45,13 +69,15 @@ $(document).ready(function(){
       $('#guess1').remove();
       $('#guess2').remove();
     }
-});
-
+};
+}
+}
+play();
 //// show word function
 $('#guess1').on('change', function(){
   $guess1 = $('#guess1').val().toLowerCase();
   var checker = false;
-checkLetter.forEach(function(u){
+  checkLetter.forEach(function(u){
       if ($guess1 === u){
         alert("You've already tried that letter.");
         $('#guess1').val('');
@@ -116,14 +142,22 @@ if (checker === false){
 });
 var finished1 = function(){
   if (($('#letter1').length === 0) && ($('#letter2').length === 0) && ($('#letter3').length === 0) && ($('#letter4').length === 0)){
-      $('#usedLetters').replaceWith('<p id="winner">You Got It. Nice Game!!!</p>')
+      $('#usedLetters').replaceWith('<button id="nextGame">Next Game</button>');
       $hangImg.replaceWith('<video width="400" height="400" autoplay> <source src="./hangManImages/showWin.m4v" type="video/mp4">');
+      $("video").prop("volume", 0.3);
       $hangImg.css({"-webkit-filter": "invert(0%)"});
       $hangImg.css({'filter': 'invert(0%)'});
       $hangImg.css('background-size', '300px 400px');
-      $('p2').remove();
-      $('#gal').replaceWith('<button id="nextGame">Next Game</button>');
-      $('input').remove();
+      $('p2').replaceWith('');
+      $('#gal').replaceWith('<p id="winner">You Got It. Nice Game!!!</p>');
+      $('input').replaceWith('');
+      $('#nextGame').on('click', function(){
+          $hangImg.css({"-webkit-filter": "invert(0%)"});
+          $hangImg.css({'filter': 'invert(0%)'});
+          $hangImg.css('background-size', '300px 400px');
+          $('article').html("<img id= 'hangImg'><p id='hint'></p><div id='textBox'></div><div id='inputs'><input class ='letter' id='guess1'><input class ='letter' id='guess2'><input class ='letter' id='guess3'><p id='gal'>Guess a letter!!</p></div><p2><u>Wrong Letters</u></p2><p id='usedLetters'></p>");
+          game();
+});
   }
 }
 
@@ -199,15 +233,21 @@ if (checker === false){
 
 var finished2 = function(){
   if (($('#playa1').length === 0) && ($('#playa2').length === 0) && ($('#playa3').length === 0) && ($('#playa4').length === 0) && ($('#playa5').length === 0)){
-      $('#usedLetters').replaceWith('<p id="winner">You Got It. Nice Game!!!</p>')
+      $('#usedLetters').replaceWith('<button id="nextGame">Next Game</button>');
       $hangImg.css({"background-image": "url(./hangManImages/playaWin.jpg)"});
       $hangImg.css({"-webkit-filter": "invert(0%)"});
       $hangImg.css({'filter': 'invert(0%)'});
       $hangImg.css('background-size', '300px 400px');
-      $('p2').remove();
-      $('#gal').replaceWith('<button id="nextGame">Next Game</button>');
-      $('input').remove();
-
+      $('p2').replaceWith('');
+      $('#gal').replaceWith('<p id="winner">You Got It. Nice Game!!!</p>');
+      $('input').replaceWith('');
+      $('#nextGame').on('click', function(){
+          $hangImg.css({"-webkit-filter": "invert(0%)"});
+          $hangImg.css({'filter': 'invert(0%)'});
+          $hangImg.css('background-size', '300px 400px');
+          $('article').html("<img id= 'hangImg'><p id='hint'></p><div id='textBox'></div><div id='inputs'><input class ='letter' id='guess1'><input class ='letter' id='guess2'><input class ='letter' id='guess3'><p id='gal'>Guess a letter!!</p></div><p2><u>Wrong Letters</u></p2><p id='usedLetters'></p>");
+          game();
+      });
   }
 }
 
@@ -308,18 +348,25 @@ $('#guess3').on('change', function(){
 
 var finished3 = function(){
   if (($('#bm1').length === 0) && ($('#bm2').length === 0) && ($('#bm3').length === 0) && ($('#bm4').length === 0) && ($('#bm5').length === 0) && ($('#bm6').length === 0) && ($('#bm6').length === 0) && ($('#bm7').length === 0) && ($('#bm8').length === 0) && ($('#bm9').length === 0) && ($('#bm10').length === 0)){
-      $('#usedLetters').replaceWith('<p id="winner">You Got It. Nice Game!!!</p>')
-      $hangImg.css({"background-image": "url(./hangManImages/BurningManWin.jpg)"});
+      $('#usedLetters').replaceWith('<button id="nextGame">Next Game</button>');
+      $hangImg.replaceWith('<video width="400" height="400" autoplay> <source src="./hangManImages/fireworksWin.MOV">');
+      $("video").prop("volume", 0.3);
       $hangImg.css({"-webkit-filter": "invert(0%)"});
       $hangImg.css({'filter': 'invert(0%)'});
       $hangImg.css('background-size', '300px 400px');
-      $('p2').remove();
-      $('#gal').replaceWith('<button id="nextGame">Next Game</button>');
-      $('input').remove();
+      $('p2').replaceWith('');
+      $('#gal').replaceWith('<p id="winner">You Got It. Nice Game!!!</p>');
+      $('input').replaceWith('');
+      $('#nextGame').on('click', function(){
+          $hangImg.css({"-webkit-filter": "invert(0%)"});
+          $hangImg.css({'filter': 'invert(0%)'});
+          $hangImg.css('background-size', '300px 400px');
+          $('article').html("<img id= 'hangImg'><p id='hint'></p><div id='textBox'></div><div id='inputs'><input class ='letter' id='guess1'><input class ='letter' id='guess2'><input class ='letter' id='guess3'><p id='gal'>Guess a letter!!</p></div><p2><u>Wrong Letters</u></p2><p id='usedLetters'></p>");
+          game();
+
+});
   }
 }
+};
+game();
 
-$('#nextGame').on('click', function(){
-  console.log('click');
-      game();
-});
