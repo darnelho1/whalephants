@@ -117,12 +117,12 @@ if (checker === false){
 var finished1 = function(){
   if (($('#letter1').length === 0) && ($('#letter2').length === 0) && ($('#letter3').length === 0) && ($('#letter4').length === 0)){
       $('#usedLetters').replaceWith('<p id="winner">You Got It. Nice Game!!!</p>')
-      $hangImg.css({"background-image": "url(" + hangManImages[10] + ")"});
+      $hangImg.replaceWith('<video width="400" height="400" autoplay> <source src="./hangManImages/showWin.m4v" type="video/mp4">');
       $hangImg.css({"-webkit-filter": "invert(0%)"});
       $hangImg.css({'filter': 'invert(0%)'});
       $hangImg.css('background-size', '300px 400px');
       $('p2').remove();
-      $('#gal').remove();
+      $('#gal').replaceWith('<button id="nextGame">Next Game</button>');
       $('input').remove();
   }
 }
@@ -200,12 +200,12 @@ if (checker === false){
 var finished2 = function(){
   if (($('#playa1').length === 0) && ($('#playa2').length === 0) && ($('#playa3').length === 0) && ($('#playa4').length === 0) && ($('#playa5').length === 0)){
       $('#usedLetters').replaceWith('<p id="winner">You Got It. Nice Game!!!</p>')
-      $hangImg.css({"background-image": "url(" + hangManImages[10] + ")"});
+      $hangImg.css({"background-image": "url(./hangManImages/playaWin.jpg)"});
       $hangImg.css({"-webkit-filter": "invert(0%)"});
       $hangImg.css({'filter': 'invert(0%)'});
       $hangImg.css('background-size', '300px 400px');
       $('p2').remove();
-      $('#gal').remove();
+      $('#gal').replaceWith('<button id="nextGame">Next Game</button>');
       $('input').remove();
 
   }
@@ -309,12 +309,17 @@ $('#guess3').on('change', function(){
 var finished3 = function(){
   if (($('#bm1').length === 0) && ($('#bm2').length === 0) && ($('#bm3').length === 0) && ($('#bm4').length === 0) && ($('#bm5').length === 0) && ($('#bm6').length === 0) && ($('#bm6').length === 0) && ($('#bm7').length === 0) && ($('#bm8').length === 0) && ($('#bm9').length === 0) && ($('#bm10').length === 0)){
       $('#usedLetters').replaceWith('<p id="winner">You Got It. Nice Game!!!</p>')
-      $hangImg.css({"background-image": "url(" + hangManImages[10] + ")"});
+      $hangImg.css({"background-image": "url(./hangManImages/BurningManWin.jpg)"});
       $hangImg.css({"-webkit-filter": "invert(0%)"});
       $hangImg.css({'filter': 'invert(0%)'});
       $hangImg.css('background-size', '300px 400px');
       $('p2').remove();
-      $('#gal').remove();
+      $('#gal').replaceWith('<button id="nextGame">Next Game</button>');
       $('input').remove();
   }
 }
+
+$('#nextGame').on('click', function(){
+  console.log('click');
+      game();
+});
