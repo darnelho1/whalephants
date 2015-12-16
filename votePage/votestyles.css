@@ -9,12 +9,6 @@
 
 }
 
-.divbackground p{
-  word-wrap: break-word;
-  height: 200px;
-  width: 200px;
-  text-align: left;
-}
 
 .button-p{
   display: flex;
@@ -47,57 +41,54 @@
   width: 160px;
 
 }
-.voteP{
-  display: flex;
-  flex-direction:row;
-  flex-wrap:wrap;
-  /*word-wrap:break-word;*/
-  color: white;
-  /*font-family: 'Gochi Hand', cursive;*/
-  font-size: 20px;
-/*  width:700px;*/
-  margin-top: 6px;
-  text-align: center;
-  border-radius: 15px;
-  background-color: rgba(0,0,0,.1);
-/*  border: solid;*/
-}
 
 p{
   /*border:solid;*/
 }
 
-
+#sBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  /*border:solid;*/
+}
 #searchBox{
-  margin-left: 870px;
-  width: 445px;
+  width: 40%;
   height: 40px;
   font-size: 20px;
   font-weight: bold;
-  align-self: flex-end;
+  margin-right: 4%;
 }
 
 #images{
   display: flex;
   flex-direction:row;
   flex-wrap:wrap;
+  justify-content: center;
   width: inherit;
   height: inherit;
-  align-items:flex-start;
+  align-items: flex-start;
   /*border: solid;*/
   align-self:flex-start;
 }
 
 #voteCopy{
   display: flex;
-/*  border: solid;*/
-  height: 110px;
-  max-width: inherit;
-  margin-bottom: 850px;
-  margin-right: -500px;
-  margin-left: 150px;
-  align-items: flex-start;
-  align-self:flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  word-wrap: break-word;
+  color: white;
+  font-family: 'Gochi Hand', cursive;
+  font-size: 20px;
+  width: 90%;
+  padding-top: 0;
+  text-align: center;
+  border-radius: 15px;
+  background-color: rgba(0,0,0,.1);
+  /*border: solid;*/
 }
 
 
@@ -107,28 +98,21 @@ p{
 
 #contentSection{
   display: flex;
-  flex-direction:row;
+  flex-direction: column;
   flex-wrap:wrap;
   align-items: flex-start;
-  /*margin-top: 400px;*/
-  margin-top: 100px;
-  margin-left: -650px;
-  margin-right: 50px;
-  max-width: inherit;
-  height:800px;
-  background-size: 1600px, 800px;
-  overflow-y: scroll;
-/*  border: solid;*/
+  border: solid;
 }
 
-#voteSection{
+
+#drinks{
   display: flex;
   flex-direction:row;
-  justify-content:space-around;
-/*  align-items:flex-end;*/
-  /*margin-top: -443px;*/
-  height: 1000px;
-  /*border: solid;*/
-  /*border-color: red;*/
-
+  overflow-y: scroll;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 98%;
+  height:800px;
+  /*border: solid white;*/
 }
