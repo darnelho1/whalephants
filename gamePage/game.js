@@ -116,8 +116,9 @@ if (checker === false){
 });
 var finished1 = function(){
   if (($('#letter1').length === 0) && ($('#letter2').length === 0) && ($('#letter3').length === 0) && ($('#letter4').length === 0)){
+      $hangImg.replaceWith('<video width="375" height="400" autoplay> <source src="./hangManImages/showWin.m4v" type="video/mp4">');
       $('#usedLetters').replaceWith('<p id="winner">You Got It. Nice Game!!!</p>')
-      $hangImg.css({"background-image": "url(" + hangManImages[10] + ")"});
+      // $hangImg.css({"background-image": "url(" + hangManImages[10] + ")"});
       $hangImg.css({"-webkit-filter": "invert(0%)"});
       $hangImg.css({'filter': 'invert(0%)'});
       $hangImg.css('background-size', '300px 400px');

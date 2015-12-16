@@ -65,7 +65,7 @@ function loadImages(){
   $outerDiv.append("<div class='image' id=drink" + drink.drinkId + "> </div>");
   //console.log(drink.drinkId);
   $('#drink'+drink.drinkId).css({"background-image": "url(" + drink.drinkImage + ")"})
-  $('#drink'+drink.drinkId).append("<ul  class = 'ingredients' id='ingredients" + drink.drinkId +"'></ul>")
+  $('#drink'+drink.drinkId).append("<ul id='ingredients" + drink.drinkId +"'></ul>")
   $outerDiv.append("<div class='button-p'> <input class ='radiobtn' type='radio' name='"+ drink.drinkName + " ' id='button"+ drink.drinkId + "' value='"+ drink.drinkName +"'>" + "<p>" + drink.drinkName + "</p>" + "</div>")
   $('#button'+drink.drinkId).css({ "display":"flex"})
   }
@@ -85,6 +85,7 @@ function onMousover(){
     $(document).ready(function(){
       $('#drink'+drink.drinkId).mouseenter(function(){
         drink.ingredients.forEach(function(item){
+            $('#ingredients'+drink.drinkId).addClass('ingredients')
             $('#ingredients'+drink.drinkId).append("<li>" + item + '</li>')
             //console.log('hello');
       })
@@ -94,6 +95,7 @@ function onMousover(){
     $(document).ready(function(){
       $('#drink'+drink.drinkId).mouseleave(function(){
         drink.ingredients.forEach(function(item){
+        $('#ingredients'+drink.drinkId).removeClass('ingredients')
           $('#ingredients'+drink.drinkId).html(' ')
           //console.log('goodbye');
         })
