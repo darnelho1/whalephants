@@ -177,6 +177,8 @@ span {
 	color: white;
 	padding: 5px;
 	font-family: 'Gochi Hand', cursive;
+	font-size: 1.25em;
+	text-align: left;
 	overflow: auto;
 }
 #CommentTitle{
@@ -186,6 +188,11 @@ span {
 	width: 100%;
 	border-radius: 0 0 5px 5px;
 
+}
+
+#formButt {
+	display: flex;
+	flex-direction: column;
 }
 
 /*CAMP RATING*/

@@ -140,3 +140,12 @@ $('#r5').on('click', function(){
 	console.log(Rater);
 });
 
+// comment js
+$('#commentButton').click(function() {
+	$name = $('#name');
+	$comment = $('#userInput');
+	$('#commentsMade').append($name.val() + ':   ' +$comment.val());
+	$name.val('');
+	$comment.val('');
+})
+
