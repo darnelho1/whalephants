@@ -7,6 +7,7 @@
 	    -webkit-flex-direction: row;
     	justify-content: flex-start;
     	/*box-shadow: 10px 0 15px #888888;*/
+/*    	overflow: hidden;*/
 }
 
 .contactDiv {
@@ -20,6 +21,17 @@
 			/*width: 100%;*/
 }
 
+#newBorder{
+	display: flex;
+	flex-direction:row;
+	justify-content:space-between;
+	width: 95%;
+/*	border: solid;*/
+	border-color: red;
+	margin-bottom: 20px;
+
+}
+
 .formArti {
 	display: -webkit-flex;
   -webkit-flex-direction: column;
@@ -30,6 +42,10 @@
   justify-content: flex-start;
   -webkit-align-self: flex-start;
   font-family: 'Gochi Hand', cursive;
+/*  border: solid;*/
+  width: 95%;
+/*  overflow-y: scroll;*/
+  align-items:center;
 }
 
 form {
@@ -72,7 +88,8 @@ textarea {
 	align-self: flex-start;
 	flex-direction: column;
 	-webkit-flex-direction: column;
-	margin-left: 50px;
+	margin-left: 200px;
+/*	border: solid;*/
 }
 
 .responseP {
@@ -105,14 +122,15 @@ span {
 	display: -webkit-flex;
 	flex-direction: row;
 	-webkit-flex-direction: row;
-	width: 90%;
-	height: 310px;
+	width: 70%;
+	height: 250px;
 	border-top: solid white;
 	border-bottom: solid white;
 	border-radius: 10px 10px 10px 10px;
 	margin-right: 10px;
 	margin-bottom: 10px;
 	padding-top: 10px;
+	overflow: hidden;
 }
 
 #userComment{
@@ -153,7 +171,7 @@ span {
 	flex-direction: column;
 	border: solid white;
 	width: 90%;
-	height: 270px;
+	height: 80%;
 	margin-left: 10px;
 	border-radius: 20px;
 	color: white;
@@ -177,8 +195,12 @@ span {
 }
 
 .ratings {
+	margin-right: 200px;
+
+/*	border: solid;*/
 	display: flex;
 	flex-direction: column;
+	justify-content:center;
 }
 
 .rateHearts {
@@ -192,3 +214,11 @@ span {
 	border:solid white;
 }
 
+#ratingsimage{
+	height: 300px;
+	width: 300px;
+}
+
+#rateDiv{
+	align-self:center;
+}

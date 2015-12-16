@@ -53,7 +53,9 @@ var bellini = new Mixer('Bellini','images/bellini.jpg',['Prosecco'],['White peac
 
 var whiskeySour = new Mixer ('Whiskey Sour','images/whiskeySour.jpg',['Bourbon'],['1 oz Lemon Juice','1/2 oz Simple Syrup','1 1/2 oz Bourbon','1 egg white'],'Preparation: Shake with ice. Strain into ice-filled old-fashioned glass to serve "on the rocks."', ['cherry','lemon wedge']);
 
-var sazerac = new Mixer ('Sazerac', 'images/sazerac.jpg',['Cognac','Rye Whiskey'],['1/4 oz Absinthe', 'One sugar cube' , '1 1/2 oz Rye whiskey or Cognac', "Three dashes Peychaud's Bitters"],'Lemon Peel');
+var sazerac = new Mixer ('Sazerac', 'images/sazerac.jpg',['Cognac','Rye Whiskey'],['1/4 oz Absinthe', 'One sugar cube' , '1 1/2 oz Rye whiskey or Cognac', "Three dashes Peychaud's Bitters"],'Preparation: Rinse a chilled old-fashioned glass with the absinthe, add crushed ice and set it aside. Stir the remaining ingredients over ice and set it aside. Discard the ice and any excess absinthe from the prepared glass, and strain the drink into the glass. Add the Lemon peel for garnish.',['Lemon Peel']);
+
+var champagneCocktail = new Mixer ('Champagne Cocktail','images/champagne.jpg',['Champagne'],[' 2 dashes Angostura bitters, 1/3 oz Cognac, 3 oz Champagne, 1 Sugar cube'],'Preparation: Add dash of Angostura bitter onto sugar cube and drop it into champagne flute. Add cognac followed by gently pouring chilled champagne. Garnish with orange slice and maraschino cherry.',['Maraschino cherry, Orange slice']);
 
 
 

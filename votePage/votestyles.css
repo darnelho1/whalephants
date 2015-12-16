@@ -9,6 +9,7 @@
   width: 200px;
   background-size: cover;
   background-repeat: no-repeat;
+
   /*border:solid;*/
 
 }
@@ -127,9 +128,9 @@ p{
 }
 
 
-#drink4{
+/*#drink4{
   background-size: 350px, 300px;
-}
+}*/
 
 #contentSection{
   display: flex;
