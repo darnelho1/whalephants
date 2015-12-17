@@ -55,7 +55,43 @@ var whiskeySour = new Mixer ('Whiskey Sour','images/whiskeySour.jpg',['Bourbon']
 
 var sazerac = new Mixer ('Sazerac', 'images/sazerac.jpg',['Cognac','Rye Whiskey'],['1/4 oz Absinthe', 'One sugar cube' , '1 1/2 oz Rye whiskey or Cognac', "Three dashes Peychaud's Bitters"],'Preparation: Rinse a chilled old-fashioned glass with the absinthe, add crushed ice and set it aside. Stir the remaining ingredients over ice and set it aside. Discard the ice and any excess absinthe from the prepared glass, and strain the drink into the glass. Add the Lemon peel for garnish.',['Lemon Peel']);
 
-var champagneCocktail = new Mixer ('Champagne Cocktail','images/champagne.jpg',['Champagne'],[' 2 dashes Angostura bitters, 1/3 oz Cognac, 3 oz Champagne, 1 Sugar cube'],'Preparation: Add dash of Angostura bitter onto sugar cube and drop it into champagne flute. Add cognac followed by gently pouring chilled champagne. Garnish with orange slice and maraschino cherry.',['Maraschino cherry, Orange slice']);
+var champagneCocktail = new Mixer ('Champagne Cocktail','images/champagne.jpg',['Champagne'],['2 dashes Angostura bitters', '1/3 oz Cognac', '3 oz Champagne', '1 Sugar cube'],'Preparation: Add dash of Angostura bitter onto sugar cube and drop it into champagne flute. Add cognac followed by gently pouring chilled champagne. Garnish with orange slice and maraschino cherry.',['Maraschino cherry, Orange slice']);
+
+var daiquiri = new Mixer ('Daiquiri','images/daiquiri.jpg',['Rum'],['1 1/2 oz White rum', '1/2 oz Simple syrup', '1 oz Lime juice'],'Preparation: Pour all ingredients into shaker with ice cubes. Shake well. Strain in chilled cocktail glass',['Half a lime slice']);
+
+var bloodyMary = new Mixer('Bloody Mary','images/bloody_mary.jpg',['Vodka'],['Worcestershire Sauce', 'Pepper','1/2 oz Lemon juice','1 1/2 oz Vodka','Salt','3oz Tomato juice'])
+
+var gimlet = new Mixer('Gimlet','images/gimlet.jpg',['Gin'],['One part sweetened Lime Juice', 'Four parts Gin'],'Preparation: Mix and serve. Garnish with a slice of lime.',['Lime']);
+
+var pinaColada = new Mixer('Pina Colada','images/pinaColada.jpg',['Rum'],['Ingredients: 3 oz (3 parts) Pineapple juice', '1 oz (one part) White rum', '1 oz (one part) Coconut cream'],'Preparation: Mix with crushed ice until smooth. Pour into chilled glass, garnish and serve.',['Maraschino cherry', 'Pineapple slice']);
+
+var mimosa = new Mixer('Mimosa','images/mimosa.jpg',['Champagne'],[' 2 1/2 oz (1 part) Orange juice', '2 1/2 oz (1 part) Champagne'],'Preparation: Ensure both ingredients are well chilled, then mix into the glass. Serve cold.',['Cherries', 'Strawberries', 'Grenadine']);
+
+var tequilaSunrise = new Mixer('Tequila Sunrise','images/tequilaSunrise.jpg',['Tequila'],['3 oz (6 parts) Orange juice', '1 1/2 oz (3 parts) Tequila', '1/2 oz (1 part) Grenadine syrup'],'Preparation: Pour the tequila and orange juice into glass over ice. Add the grenadine, which will sink to the bottom. Do not stir. Garnish and serve.',['Orange slice', 'Cherry']);
+
+var maiTai = new Mixer('Mai Tai','images/maiTai.jpg',['Rum'],['1 1/2 oz White rum', '1/2 oz Fresh lime juice', '1/2 oz Orange curaçao', '1/2 oz Orgeat syrup', '3/4 oz Dark rum'],'Preparation: Shake all ingredients except the dark rum together in a mixer with ice. Strain into glass and float the dark rum onto the top. Garnish and serve with straw.',['Lime peel', 'Pineapple spear']);
+
+var tomCollins = new Mixer('Tom Collins','images/tomCollins.jpg',['Gin'],['1 oz (2 parts) Freshly squeezed lemon juice','1 1/2 oz Old Tom Gin','2oz Carbonated Water','1/2oz Simple Syrup'],'Preparation: Mix the gin, lemon juice and sugar syrup in a tall glass with ice, top up with soda water, garnish and serve.',['Lemon slice', 'Maraschino cherry']);
+
+var moscowMule = new Mixer('Moscow Mule','images/moscowMule.jpg',['Vodka'],['4 oz Ginger beer', '1 1/2 oz Vodka', '1/6 oz Lime juice'],'Preparation: Combine vodka and ginger beer in a copper mug or highball glass filled with ice. Add lime juice. Stir gently and garnish with a lime slice.',['Lime Slice']);
+
+var darkAndStormy = new Mixer('Dark and Stormy','images/darkAndStormy.jpg',['Rum'],['3 1/3 oz Ginger Beer', 'Couple dashes of bitters', '2 oz Dark Rum'],'Preparation: In a highball glass filled with ice, add dark rum and top with ginger beer. Garnish with lime wedge.',['Lime wedge']);
+
+var appletini = new Mixer('Appletini','images/appletini.jpg',['Vodka'],['1 1/2 oz (3 parts) Vodka', '1/2 oz (1 part) Apple Schnapps / Calvados', '1/2 oz (1 part) Cointreau'],'Preparation: Mix in a shaker, then pour into a chilled glass. Garnish and serve',['Apple Slice','Maraschino cherry']);
+
+var piscoSour = new Mixer('Pisco Sour','images/piscoSour.jpg',['Pisco'],['1 oz Lemon Juice', '1 Egg white, 1 1/2 oz Pisco', '3/4 oz Simple syrup'],'Preparation: Vigorously shake and strain contents in a cocktail shaker with ice cubes, then pour into glass and garnish with bitters.',['Angostura Bitters']);
+
+var caipirinha = new Mixer('Caipirinha','images/caipirinha.jpg',['Cachaça'],['Half a lime cut into 4 wedges', '2 Teaspoons brown sugar', '1 2/3 oz Cachaça'],'Preparation: Place lime and sugar into old fashioned glass and muddle (mash the two ingredients together using a muddler or a wooden spoon). Fill the glass with crushed ice and add the Cachaça.',['Lime','Sugar Cane']);
+
+var whiteRussian = new Mixer('White Russian','images/whiteRussian.jpg',['Vodka','Kahlua'],['2/3 oz (2 parts) Coffee liqueur', '1 2/3 oz (5 parts) Vodka', '1 oz (3 parts) Fresh cream'],'Preparation: Pour coffee liqueur and vodka into an Old Fashioned glass filled with ice. Float fresh cream on top and stir slowly.',['none']);
+
+var screwdriver = new Mixer('Screwdriver','images/screwdriver.jpg',['Vodka'],['1 3/4 oz (1 part) Vodka', '3 1/2 oz (2 parts) Orange juice'],'Preparation: Mix in a highball glass with ice. Garnish and serve.',['Orange Slice']);
+
+var longIslandIceTea = new Mixer('Long Island Ice Tea','images/longIslandIceTea.jpg',['Tequila', 'Gin', 'Vodka', 'Rum', 'Triple sec'],['1/2 oz Vodka','1/2 oz White Rum','1/2 oz Gin','1/2 oz Tequila','1/2 oz Triple sec','1oz Lemon Juice','1oz Simple Syrup','Splash of Coke'],'Preparation: Add all ingredients into highball glass filled with ice. Stir gently. Garnish with lemon spiral. Serve with straw.',['Lemon spiral']);
+
+
+
+
 
 
 
@@ -191,7 +227,7 @@ $searchBox.keyup(function(){
   //Loop to find matched drink/primary liqour/ingredients name in drink object array
 
   //drink loop
-  drinks.forEach(function(drink){
+  drinkStore.forEach(function(drink){
     if ((drink.drinkName.toUpperCase().indexOf($userSearch.toUpperCase())> -1) && (drink.drinkName.toUpperCase().charAt(0) === $userSearch.toUpperCase().charAt(0)))
         {
             //console.log(drink);
