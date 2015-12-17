@@ -107,12 +107,20 @@ $('#r5').mouseover(function(){
 	$('#r5').attr('src', starBlank);
 })
 
+//rate choice event
+function rateChoice() {
+	var avgRate = Math.floor(Rater.avg);
+	$('.rateTitle').remove();
+	$('#rateDiv').html('<h3 class="rateTitle">Average Rating: '+avgRate+'/5</h3>');
+}
+
 // Rating: Click Events
 $('#r1').on('click', function(){
 	Rater.r1++;
 	Rater.totalVote++;
 	avgRating();
 	console.log(Rater);
+	rateChoice();
 });
 
 $('#r2').on('click', function(){
@@ -120,6 +128,7 @@ $('#r2').on('click', function(){
 	Rater.totalVote++;
 	avgRating();
 	console.log(Rater);
+	rateChoice();
 });
 
 $('#r3').on('click', function(){
@@ -127,6 +136,7 @@ $('#r3').on('click', function(){
 	Rater.totalVote++;
 	avgRating();
 	console.log(Rater);
+	rateChoice();
 });
 
 $('#r4').on('click', function(){
@@ -134,6 +144,7 @@ $('#r4').on('click', function(){
 	Rater.totalVote++;
 	avgRating();
 	console.log(Rater);
+	rateChoice();
 });
 
 $('#r5').on('click', function(){
@@ -141,6 +152,7 @@ $('#r5').on('click', function(){
 	Rater.totalVote++;
 	avgRating();
 	console.log(Rater);
+	rateChoice();
 });
 
 // comment js

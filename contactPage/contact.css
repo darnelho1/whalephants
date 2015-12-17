@@ -112,6 +112,10 @@ textarea {
 	text-align: left;
 }
 
+h3 {
+	font-size: 1.25em;
+	margin: 0px;
+}
 span {
 	color: red;
 }
@@ -217,6 +221,7 @@ span {
 .rateTitle {
 	color: white;
 	font-size: 2em;
+	margin-top: 10px;
 }
 
 .ratings {
