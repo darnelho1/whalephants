@@ -101,7 +101,7 @@ aside{
     border-left: solid black;*/
     border: solid;
     border-top: rgb(76,11,122);
-    height: 400px;
+    height: 450px;
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: column;
