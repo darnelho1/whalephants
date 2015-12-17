@@ -136,7 +136,7 @@ span {
 	margin-right: 10px;
 	margin-bottom: 10px;
 	padding-top: 10px;
-	overflow: hidden;
+	overflow: scroll;
 }
 
 #userComment{
@@ -156,7 +156,7 @@ span {
 
 #userInput{
 	width: 150px;
-	height: 200px;
+	height: 100px;
 	resize: none;
   overflow: auto;
   margin-right: 10px;
@@ -206,6 +206,11 @@ span {
 	display: -webkit-flex;
 	-webkit-flex-direction: column;
 	width:30%;
+}
+
+.commentLabel {
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 /*CAMP RATING*/
