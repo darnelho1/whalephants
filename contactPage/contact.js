@@ -144,7 +144,7 @@ $('#r5').on('click', function(){
 $('#commentButton').click(function() {
 	$name = $('#name');
 	$comment = $('#userInput');
-	$('#commentsMade').append($name.val() + ':   ' +$comment.val());
+	$('#commentsMade').append('<p>'+$name.val() + ':   ' +$comment.val()+'</p>');
 	$name.val('');
 	$comment.val('');
 })
