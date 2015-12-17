@@ -1,4 +1,4 @@
-//form object constructor
+1//form object constructor
 var userMessage = function(fname, lname, email, message) {
 	this.fname = fname;
 	this.lname = lname;
