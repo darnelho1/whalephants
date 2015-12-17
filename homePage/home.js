@@ -5,3 +5,4 @@ $('.swiper-container').mouseover(function(){
 $('.swiper-container').mouseout(function(){
       $('#spin').text('');
 });
+
