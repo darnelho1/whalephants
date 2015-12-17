@@ -1,4 +1,4 @@
-1//form object constructor
+//form object constructor
 var userMessage = function(fname, lname, email, message) {
 	this.fname = fname;
 	this.lname = lname;
@@ -25,10 +25,11 @@ $submitClick = $('#submitForm').on('click', function(){
 	});
 	console.log(user);
 
-	$('#divInner').remove();
-	$('form').remove();
-	$('button').remove();
-	$('#messageSent').html('Your message has been sent!<br></br>We will reply as soon as we can.</p>')
+	$('#fnameIn').val('');
+	$('#lnameIn').val('');
+	$('#emailIn').val('');
+	$('#messageIn').val('');
+	alert('Your message has been sent! We will reply as soon as we can.');
 
 	}else {
 		$('#validateP').html('<p>Please fill ALL required fields!</p>')
