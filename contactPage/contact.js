@@ -54,55 +54,65 @@ var avgRating = function(){
 }
 
 // Rating: Mouse over/out events
+var starBlank = 'images/campStars_blank.jpg';
+var starHover = 'images/campStars_hover.jpg';
+
 $('#r1').mouseover(function(){
-	$('#r1').attr('src','images/campStars_hover.jpg');
+	$('#r1').attr('src', starHover);
 }).mouseout(function(){
-	$('#r1').attr('src','images/campStars_blank.jpg');
+	$('#r1').attr('src',starBlank);
 });
 
 $('#r2').mouseover(function(){
-	$('#r1').attr('src','images/campStars_hover.jpg');
-	$('#r2').attr('src','images/campStars_hover.jpg');
+	$('#r1').attr('src', starHover);
+	$('#r2').attr('src', starHover);
 }).mouseout(function(){
-	$('#r1').attr('src','images/campStars_blank.jpg');
-	$('#r2').attr('src','images/campStars_blank.jpg');
+	$('#r1').attr('src', starBlank);
+	$('#r2').attr('src', starBlank);
 })
 
 $('#r3').mouseover(function(){
-	$('#r1').attr('src','images/campStars_hover.jpg');
-	$('#r2').attr('src','images/campStars_hover.jpg');
-	$('#r3').attr('src','images/campStars_hover.jpg');
+	$('#r1').attr('src', starHover);
+	$('#r2').attr('src', starHover);
+	$('#r3').attr('src', starHover);
 }).mouseout(function(){
-	$('#r1').attr('src','images/campStars_blank.jpg');
-	$('#r2').attr('src','images/campStars_blank.jpg');
-	$('#r3').attr('src','images/campStars_blank.jpg');
+	$('#r1').attr('src', starBlank);
+	$('#r2').attr('src', starBlank);
+	$('#r3').attr('src', starBlank);
 })
 
 $('#r4').mouseover(function(){
-	$('#r1').attr('src','images/campStars_hover.jpg');
-	$('#r2').attr('src','images/campStars_hover.jpg');
-	$('#r3').attr('src','images/campStars_hover.jpg');
-	$('#r4').attr('src','images/campStars_hover.jpg');
+	$('#r1').attr('src', starHover);
+	$('#r2').attr('src', starHover);
+	$('#r3').attr('src', starHover);
+	$('#r4').attr('src', starHover);
 }).mouseout(function(){
-	$('#r1').attr('src','images/campStars_blank.jpg');
-	$('#r2').attr('src','images/campStars_blank.jpg');
-	$('#r3').attr('src','images/campStars_blank.jpg');
-	$('#r4').attr('src','images/campStars_blank.jpg');
+	$('#r1').attr('src', starBlank);
+	$('#r2').attr('src', starBlank);
+	$('#r3').attr('src', starBlank);
+	$('#r4').attr('src', starBlank);
 })
 
 $('#r5').mouseover(function(){
-	$('#r1').attr('src','images/campStars_hover.jpg');
-	$('#r2').attr('src','images/campStars_hover.jpg');
-	$('#r3').attr('src','images/campStars_hover.jpg');
-	$('#r4').attr('src','images/campStars_hover.jpg');
-	$('#r5').attr('src','images/campStars_hover.jpg');
+	$('#r1').attr('src', starHover);
+	$('#r2').attr('src', starHover);
+	$('#r3').attr('src', starHover);
+	$('#r4').attr('src', starHover);
+	$('#r5').attr('src', starHover);
 }).mouseout(function(){
-	$('#r1').attr('src','images/campStars_blank.jpg');
-	$('#r2').attr('src','images/campStars_blank.jpg');
-	$('#r3').attr('src','images/campStars_blank.jpg');
-	$('#r4').attr('src','images/campStars_blank.jpg');
-	$('#r5').attr('src','images/campStars_blank.jpg');
+	$('#r1').attr('src', starBlank);
+	$('#r2').attr('src', starBlank);
+	$('#r3').attr('src', starBlank);
+	$('#r4').attr('src', starBlank);
+	$('#r5').attr('src', starBlank);
 })
+
+//rate choice event
+function rateChoice() {
+	var avgRate = Math.floor(Rater.avg);
+	$('.rateTitle').remove();
+	$('#rateDiv').html('<h3 class="rateTitle">Average Rating: '+avgRate+'/5</h3>');
+}
 
 // Rating: Click Events
 $('#r1').on('click', function(){
@@ -110,6 +120,7 @@ $('#r1').on('click', function(){
 	Rater.totalVote++;
 	avgRating();
 	console.log(Rater);
+	rateChoice();
 });
 
 $('#r2').on('click', function(){
@@ -117,6 +128,7 @@ $('#r2').on('click', function(){
 	Rater.totalVote++;
 	avgRating();
 	console.log(Rater);
+	rateChoice();
 });
 
 $('#r3').on('click', function(){
@@ -124,6 +136,7 @@ $('#r3').on('click', function(){
 	Rater.totalVote++;
 	avgRating();
 	console.log(Rater);
+	rateChoice();
 });
 
 $('#r4').on('click', function(){
@@ -131,6 +144,7 @@ $('#r4').on('click', function(){
 	Rater.totalVote++;
 	avgRating();
 	console.log(Rater);
+	rateChoice();
 });
 
 $('#r5').on('click', function(){
@@ -138,6 +152,7 @@ $('#r5').on('click', function(){
 	Rater.totalVote++;
 	avgRating();
 	console.log(Rater);
+	rateChoice();
 });
 
 // comment js
