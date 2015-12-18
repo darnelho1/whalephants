@@ -216,7 +216,7 @@ function radio_button_checker(){
         myBarChart.datasets[0].bars.forEach(function(bar){
           bar.fillColor = randomColor({luminosity: 'dark',
                                        hue: 'random',
-                                       seed: 1});
+                                       format: 'rgba'});
         });
         myBarChart.update();
 
