@@ -25,11 +25,7 @@ $submitClick = $('#submitForm').on('click', function(){
 	});
 	console.log(user);
 
-	$('#fnameIn').val('');
-	$('#lnameIn').val('');
-	$('#emailIn').val('');
-	$('#messageIn').val('');
-	alert('Your message has been sent! We will reply as soon as we can.');
+	$('#divInner').html('<iframe width="auto" height="260" src="https://www.youtube.com/embed/QP-dwotCIvM?autoplay=1" frameborder="0" allowfullscreen></iframe><br/><p3>Thank you for getting in contact with us. We will get back to you as soon as possible. For now enjoy this Drone Fly over <u><b>by: Fest300</b></u>.</p3>');
 
 	}else {
 		$('#validateP').html('<p>Please fill ALL required fields!</p>')
@@ -160,7 +156,7 @@ $('#r5').on('click', function(){
 $('#commentButton').click(function() {
 	$name = $('#name');
 	$comment = $('#userInput');
-	$('#commentsMade').append('<p>'+$name.val() + ':   ' +$comment.val()+'</p>');
+	$('#userDone').prepend('<p>'+$name.val() + ':   ' +$comment.val()+'</p>');
 	$name.val('');
 	$comment.val('');
 })

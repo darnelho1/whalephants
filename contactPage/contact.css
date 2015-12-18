@@ -45,7 +45,7 @@
   -webkit-align-self: flex-start;
   align-self: flex-start;
   font-family: 'Gochi Hand', cursive;
-/*  border: solid;*/
+  /*border: solid;*/
   width: 95%;
 /*  overflow-y: scroll;*/
   align-items:center;
@@ -57,7 +57,7 @@ form {
 	flex-direction: column;
 	display: -webkit-flex;
 	-webkit-flex-direction: column;
-	/*width: 500px;*/
+	width: 40%;
 }
 
 input {
@@ -95,7 +95,6 @@ textarea {
 	margin-left: 20px;
 	width: 60%;
 /*	border: solid;*/
-/*border: solid white;*/
 }
 
 .responseP {
@@ -136,26 +135,33 @@ span {
 	height: 250px;
 	border-top: solid white;
 	border-bottom: solid white;
-	border-radius: 10px 10px 10px 10px;
+	border-radius: 10px;
 	margin-right: 10px;
 	margin-bottom: 10px;
 	padding-top: 10px;
 	overflow: scroll;
 }
 
-#userComment{
+/*#userComment{
+	display: flex;
+	display: -wbkit-flex;
+	direction: column;
+	flex-direction: column;
+	align-items: flex-start;
 	flex-direction: column;
 	-webkit-flex-direction: column;
+	-webkit-align-items: flex-start;
 	width: 230px;
-	height: 90%;
-	/*border: solid;*/
-}
+	/*height: 90%;*/
+/*	padding: 0;*/
+/*}*/
 
 #name{
- width: 150px;
- height: 30px;
- margin-right: 10px;
-
+ 	width: 150px;
+ 	height: 30px;
+ 	margin-right: 10px;
+ 	margin-top: 0;
+	margin-bottom: 0;
 }
 
 #userInput{
@@ -164,6 +170,8 @@ span {
 	resize: none;
   overflow: auto;
   margin-right: 10px;
+  margin-top: 0;
+	margin-bottom: 0;
 }
 
 #commentButton{
@@ -209,12 +217,14 @@ span {
 	flex-direction: column;
 	display: -webkit-flex;
 	-webkit-flex-direction: column;
+	justify-content: flex-start;
 	width:30%;
 }
 
 .commentLabel {
 	margin-top: 0px;
 	margin-bottom: 0px;
+	/*border: solid white;*/
 }
 
 /*CAMP RATING*/
@@ -260,4 +270,14 @@ span {
 #rateDiv{
 	align-self:center;
 	-webkit-align-self:center;
+}
+
+iframe{
+	margin-right: 5px;
+}
+
+p3{
+	color: white;
+	font-family: 'Gochi Hand', cursive;
+	font-size: 1.5em;
 }
