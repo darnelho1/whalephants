@@ -41,7 +41,7 @@ header{
     }
 
 #logo{
-    z-index: 2;
+    z-index: 3;
     width: 100px;
     height: 100px;
     margin-top: -60px;
@@ -90,6 +90,7 @@ section{
     align-items: center;
     align-self: flex-start;
     align-items: center;
+    z-index: 2;
 }
 
 aside{
