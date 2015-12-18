@@ -104,6 +104,8 @@ p{
   /*border: solid;*/
   align-self: flex-start;
   -webkit-align-self: flex-start;
+  height: inherit;
+  width: inherit;
 }
 
 #voteCopy{
@@ -164,6 +166,6 @@ p{
 }
 
 #myChart{
-  height: 400px;
-  width: 50%;
+  height: inherit;
+  width: inherit;
 }

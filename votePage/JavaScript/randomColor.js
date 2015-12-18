@@ -179,7 +179,7 @@
 
       case 'rgba':
         var rgbColor = HSVtoRGB(hsv);
-        return 'rgba(' + rgbColor.join(', ') + ', ' + 0.8 + ')';
+        return 'rgba(' + rgbColor.join(', ') + ', ' + 0.7 + ')';
 
       default:
         return HSVtoHex(hsv);
