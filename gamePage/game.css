@@ -8,8 +8,12 @@ article{
 #textBox{
   display: -webkit-flex;
     -webkit-flex-direction: row;
+    display: flex;
+    flex-direction: row;
     -webkit-justify-content: center;
     -webkit-align-items: center;
+    justify-content: center;
+    align-items: center;
     width: 650px;
     height:200px;
     -webkit-flex-wrap: wrap;
@@ -70,6 +74,8 @@ p{
 #inputs{
     display: -webkit-flex;
     -webkit-flex-direction: row;
+    display: flex;
+    flex-direction: row;
     -webkit-justify-content: center;
     -webkit-align-items: center;
 }
