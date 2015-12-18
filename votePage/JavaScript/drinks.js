@@ -5,7 +5,7 @@ $imageId = $('#images');
 $searchBox = $('#searchBox');
 
 randomNum =  function (){
-  var ranNum = Math.floor((Math.random() * 450) + 1)
+  var ranNum = Math.floor((Math.random() * 250) + 1)
   return ranNum;
 }
 //Object constructor to create drink objects
@@ -216,18 +216,15 @@ function radio_button_checker(){
         myBarChart.datasets[0].bars.forEach(function(bar){
           bar.fillColor = randomColor({luminosity: 'dark',
                                        hue: 'random',
-                                       seed: 1});
+                                       format: 'rgba'});
         });
         myBarChart.update();
 
 
         // drinks.forEach(function(drink){
         //   $greyedDrink = $('#ingredients'+drink.drinkId);
-        //   //$greyedDrink.removeClass('ingredients')
         //   $greyedDrink.addClass('voteComplete')
         //   $('#button'+drink.drinkId).attr('disabled', true)
-        //   //console.log($greyedDrink)
-        //   //console.log('done');
         // })
       }
 
