@@ -4,6 +4,10 @@ var counter = 1;
 $imageId = $('#images');
 $searchBox = $('#searchBox');
 
+randomNum =  function (){
+  var ranNum = Math.floor((Math.random() * 450) + 1)
+  return ranNum;
+}
 //Object constructor to create drink objects
 
 var Mixer = function(drinkName,drinkImage,primaryLiqour,ingredients,recipe,garnish){
@@ -13,11 +17,12 @@ var Mixer = function(drinkName,drinkImage,primaryLiqour,ingredients,recipe,garni
   this.ingredients = ingredients;
   this.recipe = recipe;
   this.garnish = garnish;
-  this.drinkVotes = 0;
+  this.drinkVotes = [randomNum()];
   this.drinkDay = '';
   this.drinkId = counter++;
       drinks.push(this);
       drinkStore.push(this);
+      // myBarChart.addData([40, 60], "August");
   //console.log(this);
 }
 
@@ -106,14 +111,29 @@ function loadImages(){
   $('#drink'+drink.drinkId).append("<ul id='ingredients" + drink.drinkId +"'></ul>")
   $outerDiv.append("<div class='button-p'> <input class ='radiobtn' type='radio' name='"+ drink.drinkName + " ' id='button"+ drink.drinkId + "' value='"+ drink.drinkName +"'>" + "<p>" + drink.drinkName + "</p>" + "</div>")
   $('#button'+drink.drinkId).css({ "display":"flex"})
-  }
+  });
 
-)
+  // $imageId.append('<canvas id="myChart" width="1400" height="600"></canvas>');
+
 };
+
+
 
 
 //calling the load images function
 loadImages();
+
+
+
+
+
+
+// myBarChart.datasets[0].bars[0].fillColor = 'red';
+// myBarChart.datasets[0].bars[1].fillColor = 'green';
+// myBarChart.update();
+
+
+
 
 
 
@@ -153,43 +173,66 @@ var bttnCounter = 0;
 function radio_button_checker(){
   $(document).ready(function(){
     $radios = $(".radiobtn") ;
-    //console.log($radios);
 
     $radios.each(function(radio, val){
       if (val.checked){
-        //console.log(radio);
-        //console.log(drinks[radio]);
-        //tracker.votes.push(drinks[radio]);
-        //console.log(tracker.votes);
         bttnCounter++
-          //voteChart();
         console.log(bttnCounter);
       }
 
       if ((bttnCounter > 1) && val.checked){
         tracker.votes.push(drinks[radio]);
         console.log(tracker.votes);
-        drinks[radio].drinkVotes++;
+        drinkStore[radio].drinkVotes[0]++;
         console.log(drinks[radio])
+        $imageId.html('')
 
-        drinks.forEach(function(drink){
-          $greyedDrink = $('#ingredients'+drink.drinkId);
-          //$greyedDrink.removeClass('ingredients')
-          $greyedDrink.addClass('voteComplete')
-          $('#button'+drink.drinkId).attr('disabled', true)
-          //console.log($greyedDrink)
-          //console.log('done');
+        //Creating Chart and pushing data into Chart
+        $imageId.append("<canvas id='myChart'></canvas>");
+
+        var ctx = $("#myChart").get(0).getContext("2d");
+
+        var chartData = {
+            labels: [],
+            datasets: [
+                {
+                    label: "Drink Vote Results",
+                    strokeColor: "rgba(220,220,220,1)",
+                    pointColor: "rgba(220,220,220,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(220,220,220,1)",
+                    data: []
+                },
+            ]
+        };
+        var myBarChart = new Chart(ctx).Bar(chartData, {
+        responsive: true, scaleFontColor: "white", scaleFontSize: 15 });
+
+        drinkStore.forEach(function(drink){
+          myBarChart.addData(drink.drinkVotes, drink.drinkName);
         })
+
+        myBarChart.datasets[0].bars.forEach(function(bar){
+          bar.fillColor = randomColor({luminosity: 'dark',
+                                       hue: 'random',
+                                       seed: 1});
+        });
+        myBarChart.update();
+
+
+        // drinks.forEach(function(drink){
+        //   $greyedDrink = $('#ingredients'+drink.drinkId);
+        //   //$greyedDrink.removeClass('ingredients')
+        //   $greyedDrink.addClass('voteComplete')
+        //   $('#button'+drink.drinkId).attr('disabled', true)
+        //   //console.log($greyedDrink)
+        //   //console.log('done');
+        // })
       }
-      //console.log(val);
+
     });
 
-    // if (tracker.votes.length > 0){
-    //   drinks.forEach(function(drink){
-    //     $('#button'+drink.drinkId).attr('disabled', true)
-    //   })
-    // }
-    //console.log(bttnCounter);
   });
 
 };

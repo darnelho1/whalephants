@@ -162,3 +162,8 @@ p{
   margin-bottom: 20px;
   /*border: solid white;*/
 }
+
+#myChart{
+  height: 600px;
+  width: 80%;
+}
