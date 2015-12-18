@@ -171,6 +171,7 @@ var bttnCounter = 0;
 
 //Creating Chart and pushing data into Chart
 function voteChart(){
+  $('#drinks').css('width', '97%');
   $imageId.append("<canvas id='myChart'></canvas>");
 
   var ctx = $("#myChart").get(0).getContext("2d");
@@ -330,4 +331,34 @@ $searchBox.keyup(function(){
   //console.log($userSearch);
 });
 
+$(window).resize(function(){
+    var width = $(window).width();
+    console.log(width);
+
+    while(width < 1250){
+      $('canvas').css('width', '1000');
+                      // height: '800'});
+
+      break;
+
+    }
+    while(width < 1100){
+      $('canvas').css('width', '800');
+                       // height: '600' });
+      break;
+
+    }
+    while(width < 1000){
+      $('canvas').css('width', '700');
+                      // height: '400'});
+      break;
+
+    }
+    // while(width < 900){
+    //   $('canvas').css({width: '600',
+    //                   height: '200'});
+    //   break;
+
+    // }
+});
 
