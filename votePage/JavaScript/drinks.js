@@ -169,6 +169,42 @@ onMousover();
 //couting the number of votes on drinks that have been made.
 var bttnCounter = 0;
 
+//Creating Chart and pushing data into Chart
+function voteChart(){
+  $imageId.append("<canvas id='myChart'></canvas>");
+
+  var ctx = $("#myChart").get(0).getContext("2d");
+
+  var chartData = {
+      labels: [],
+      datasets: [
+          {
+              label: "Drink Vote Results",
+              strokeColor: "rgba(220,220,220,1)",
+              pointColor: "rgba(220,220,220,1)",
+              pointStrokeColor: "#fff",
+              pointHighlightFill: "#fff",
+              pointHighlightStroke: "rgba(220,220,220,1)",
+              data: []
+          },
+      ]
+  };
+
+  var myBarChart = new Chart(ctx).Bar(chartData, {
+  responsive: true, scaleFontColor: "white", scaleFontSize: 15 });
+
+  drinkStore.forEach(function(drink){
+    myBarChart.addData(drink.drinkVotes, drink.drinkName);
+  })
+
+  myBarChart.datasets[0].bars.forEach(function(bar){
+    bar.fillColor = randomColor({luminosity: 'dark',
+                                 hue: 'random',
+                                 format: 'rgba'});
+  });
+  myBarChart.update();
+}
+
 //function to check if a drink has been voted on
 function radio_button_checker(){
   $(document).ready(function(){
@@ -186,39 +222,7 @@ function radio_button_checker(){
         drinkStore[radio].drinkVotes[0]++;
         console.log(drinks[radio])
         $imageId.html('')
-
-        //Creating Chart and pushing data into Chart
-        $imageId.append("<canvas id='myChart'></canvas>");
-
-        var ctx = $("#myChart").get(0).getContext("2d");
-
-        var chartData = {
-            labels: [],
-            datasets: [
-                {
-                    label: "Drink Vote Results",
-                    strokeColor: "rgba(220,220,220,1)",
-                    pointColor: "rgba(220,220,220,1)",
-                    pointStrokeColor: "#fff",
-                    pointHighlightFill: "#fff",
-                    pointHighlightStroke: "rgba(220,220,220,1)",
-                    data: []
-                },
-            ]
-        };
-        var myBarChart = new Chart(ctx).Bar(chartData, {
-        responsive: true, scaleFontColor: "white", scaleFontSize: 15 });
-
-        drinkStore.forEach(function(drink){
-          myBarChart.addData(drink.drinkVotes, drink.drinkName);
-        })
-
-        myBarChart.datasets[0].bars.forEach(function(bar){
-          bar.fillColor = randomColor({luminosity: 'dark',
-                                       hue: 'random',
-                                       format: 'rgba'});
-        });
-        myBarChart.update();
+        voteChart();
 
 
         // drinks.forEach(function(drink){
@@ -244,17 +248,6 @@ $(document).ready(function(){
 }
 buttonListner();
 
-
-function voteChart(){
-
-  //place holder for code for pushing chart
-
-
-  if(bttnCounter>2){
-
-    console.log('done');
-  }
-}
 
 //Search Box Function
 $searchBox.keyup(function(){
