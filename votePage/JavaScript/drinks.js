@@ -260,6 +260,28 @@ $searchBox.keyup(function(){
 
   //Loop to find matched drink/primary liqour/ingredients name in drink object array
 
+  //Brain Hemorrhage Cocktail Easter Egg.
+  if ($userSearch.toUpperCase() === 'BRAIN HEMORRHAGE'){
+
+        // drinkStore.forEach(function(drink){
+        //   drinks.push(drink) //push complete drink list to drinks array
+
+        // })
+
+        // loadImages();
+
+        $('section').effect("shake");
+
+        function showvideo(){
+          $('#drinks').html('<iframe width="80%" height="70%" src="https://www.youtube.com/embed/26Va836YJoY?autoplay=1" frameborder="0" allowfullscreen></iframe>')
+        }
+
+        window.setTimeout(showvideo, 1000);
+        // showvideo();
+
+      return;
+    }
+
   //drink loop
   drinkStore.forEach(function(drink){
     if ((drink.drinkName.toUpperCase().indexOf($userSearch.toUpperCase())> -1) && (drink.drinkName.toUpperCase().charAt(0) === $userSearch.toUpperCase().charAt(0)))
