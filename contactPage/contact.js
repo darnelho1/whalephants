@@ -28,7 +28,8 @@ $submitClick = $('#submitForm').on('click', function(){
 	$('#divInner').html('<iframe width="auto" height="260" src="https://www.youtube.com/embed/QP-dwotCIvM?autoplay=1" frameborder="0" allowfullscreen></iframe><br/><p3>Thank you for getting in contact with us. We will get back to you as soon as possible. For now enjoy this Drone Fly over <u><b>by: Fest300</b></u>.</p3>');
 
 	}else {
-		$('#validateP').html('<p>Please fill ALL required fields!</p>')
+		$('#required').text('Please fill ALL required fields!');
+		$('#required').addClass('messageInstruct reqText');
 	}
 });
 
