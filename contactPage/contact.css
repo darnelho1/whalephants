@@ -139,7 +139,7 @@ span {
 	margin-right: 10px;
 	margin-bottom: 10px;
 	padding-top: 10px;
-	overflow: scroll;
+	overflow-y: auto;
 }
 
 /*#userComment{
@@ -176,7 +176,7 @@ span {
 
 #commentButton{
 	margin-bottom: 15px;
-	width: 55px;
+	width: 65px;
 	display: flex;
 	display: -webkit-flex;
 	flex-direction: column;
@@ -191,6 +191,8 @@ span {
 	flex-direction: column;
 	display: -webkit-flex;
 	-webkit-flex-direction: column;
+	/*justify-content: flex-start;
+	flex-wrap:wrap;*/
 	border: solid white;
 	width: 90%;
 	height: 80%;
@@ -201,7 +203,7 @@ span {
 	font-family: 'Gochi Hand', cursive;
 	font-size: 1.25em;
 	text-align: left;
-	overflow: auto;
+	overflow-y: auto;
 }
 #CommentTitle{
 	font-size: 2em;
@@ -284,4 +286,8 @@ p3{
 
 .reqText {
 	color: yellow;
+}
+
+.usercomment{
+	margin: 10px;
 }
