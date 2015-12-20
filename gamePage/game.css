@@ -91,6 +91,7 @@ p2{
   font-size: 1em;
   margin-bottom: 0px;
   padding-bottom: 0px;
+  margin-top: 15px;
 }
 #guess1{
   visibility: hidden;
@@ -131,4 +132,9 @@ button{
 
 .rotate{
     -moz-transform: rotate(90deg);
+}
+#moz{
+  width: 400px;
+  height: 400px;
+  display: flex;
 }

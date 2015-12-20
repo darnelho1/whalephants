@@ -14,7 +14,9 @@ $hangImg = $('#hangImg');
     var play = function(){
       var used = false;
       if(gamesPlayed === 4){
-      $('article').html("<p id='gal'>Thank you for playing all the words!</p><video class='rotate' hight='400px' width='400px' autoplay> <source src='./hangManImages/finalWin.m4v' type='video/mp4'>");
+      $('article').html("<p id='gal'>Thank you for playing all the words!</p><div id='moz'><video class='rotate' hight='400px' width='400px' autoplay> <source src='./hangManImages/finalWin.m4v' type='video/mp4'></div>");
+      $('article').css('-webkit-justify-content', 'flex-start');
+      $('article').css('justify-content', 'flex-start');
       $('#gal').css('width', '600px');
       $('#gal').css('margin-bottom', '0')
       $('video').css('margin-top', '0');
