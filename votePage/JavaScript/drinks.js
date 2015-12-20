@@ -357,15 +357,23 @@ $(window).resize(function(){
     var width = $(window).width();
     console.log(width);
 
-    while(width < 1250){
+    while(width < 1350){
       $('canvas').css('width', '1000');
                       // height: '800'});
 
       break;
 
     }
+
+    while(width < 1250){
+      $('canvas').css('width', '860');
+                      // height: '800'});
+
+      break;
+
+    }
     while(width < 1100){
-      $('canvas').css('width', '800');
+      $('canvas').css('width', '760');
                        // height: '600' });
       break;
 
