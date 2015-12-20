@@ -16,7 +16,7 @@ app.listen(3000, function() {
 });
 
 var db = {
-	users: []
+	users: [],
 	mixers: [
 		{
 			drinkName:'Martini',
@@ -24,7 +24,7 @@ var db = {
 			primaryLiqour:'Gin',
 			ingredients:['1/2 oz (1 part) Dry vermouth', '3 oz (6 parts) Gin'],
 			recipe:'Preparation: Straight: Pour all ingredients into mixing glass with ice cubes. Stir well. Strain in chilled martini cocktail glass. Squeeze oil from lemon peel onto the drink, or garnish with olive.',
-			garnish:['Olive','Lemon twist']
+			garnish:['Olive','Lemon twist'],
 			drinkVotes:0,
 			drinkDay:'',
 			drinkId:1
@@ -122,7 +122,8 @@ var db = {
 			drinkImage:'images/sidecar.jpg',
 			primaryLiqour:'Brandy',
 			ingredients:['2 oz Cognac', '3/4 oz Lemon juice','3/4 oz Triple sec'],
-			recipe:'Preparation: Pour all ingredients into cocktail shaker filled with ice. Shake well and strain into cocktail glass.','none',
+			recipe:'Preparation: Pour all ingredients into cocktail shaker filled with ice. Shake well and strain into cocktail glass.',
+			garnish:'none',
 			drinkVotes:0,
 			drinkDay:'',
 			drinkId:10
@@ -143,14 +144,14 @@ var db = {
 			drinkImage:'images/whiskeySour.jpg',
 			primaryLiqour:'Bourbon',
 			ingredients:['1 oz Lemon Juice','1/2 oz Simple Syrup','1 1/2 oz Bourbon','1 egg white'],
-			recipe:'Preparation: Shake with ice. Strain into ice-filled old-fashioned glass to serve "on the rocks."', 
+			recipe:'Preparation: Shake with ice. Strain into ice-filled old-fashioned glass to serve "on the rocks."',
 			garnish:['cherry','lemon wedge'],
 			drinkVotes:0,
 			drinkDay:'',
 			drinkId:12
 		},
 		{
-			drinkName:'Sazerac', 
+			drinkName:'Sazerac',
 			drinkImage:'images/sazerac.jpg',
 			primaryLiqour:['Cognac','Rye Whiskey'],
 			ingredients:['1/4 oz Absinthe', 'One sugar cube' , '1 1/2 oz Rye whiskey or Cognac', "Three dashes Peychaud's Bitters"],

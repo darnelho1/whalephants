@@ -1,10 +1,11 @@
 {
   "name": "whalephants",
   "version": "1.0.0",
-  "description": "",
+  "description": "project for code 201",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,7 @@
   },
   "homepage": "https://github.com/ascasson/whalephants#readme",
   "dependencies": {
-    "body-parser": "^1.14.1",
+    "body-parser": "^1.14.2",
     "express": "^4.13.3"
   }
 }
