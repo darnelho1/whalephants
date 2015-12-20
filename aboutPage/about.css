@@ -10,6 +10,7 @@ p3{
   font-size: 1.3em;
   color: white;
   width: 650px;
+  margin-bottom: 10px;
 }
 article{
   overflow-y: scroll;
@@ -42,7 +43,7 @@ img{
 
 #cornerTime{
   height: 600px;
-  padding-top: 20px;
+  padding-top: 25px;
 }
 
 #drinkTime{
