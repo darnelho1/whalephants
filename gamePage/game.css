@@ -128,3 +128,7 @@ button{
   color: black;
   border-color: black;
 }
+
+.rotate{
+    -moz-transform: rotate(90deg);
+}
