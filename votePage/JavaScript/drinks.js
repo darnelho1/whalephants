@@ -263,12 +263,12 @@ $searchBox.keyup(function(){
   //Brain Hemorrhage Cocktail Easter Egg.
   if ($userSearch.toUpperCase() === 'BRAIN HEMORRHAGE'){
 
-        // drinkStore.forEach(function(drink){
-        //   drinks.push(drink) //push complete drink list to drinks array
+        drinkStore.forEach(function(drink){
+          drinks.push(drink) //push complete drink list to drinks array
 
-        // })
+        })
 
-        // loadImages();
+        loadImages();
 
         $('section').effect("shake");
 
