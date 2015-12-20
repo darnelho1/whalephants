@@ -157,7 +157,7 @@ $('#r5').on('click', function(){
 $('#commentButton').click(function() {
 	$name = $('#name');
 	$comment = $('#userInput');
-	$('#userDone').prepend('<p class="usercomment">'+$name.val() + ':   ' +$comment.val()+'</p>');
+	$('#userDone').prepend('<p class = "usercomment">'+$name.val() + ':   ' +$comment.val()+'</p>');
 	$name.val('');
 	$comment.val('');
 })
