@@ -169,5 +169,5 @@ app.post('/users', function(req, res){
 	db.users.push(users);
 	console.log('success');
 	res.json({msg: 'posted'});
-	console.log(db);
+	console.log(db.users);
 });
