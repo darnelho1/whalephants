@@ -14,7 +14,7 @@ $hangImg = $('#hangImg');
     var play = function(){
       var used = false;
       if(gamesPlayed === 4){
-      $('article').html("<p id='gal'>Thank you for playing all the words!</p><video hight='400px' width='400px' autoplay> <source src='./hangManImages/finalWin.mov'>");
+      $('article').html("<p id='gal'>Thank you for playing all the words!</p><video class='rotate' hight='400px' width='400px' autoplay> <source src='./hangManImages/finalWin.m4v' type='video/mp4'>");
       $('#gal').css('width', '600px');
       $('#gal').css('margin-bottom', '0')
       $('video').css('margin-top', '0');
@@ -349,7 +349,7 @@ $('#guess3').on('change', function(){
 var finished3 = function(){
   if (($('#bm1').length === 0) && ($('#bm2').length === 0) && ($('#bm3').length === 0) && ($('#bm4').length === 0) && ($('#bm5').length === 0) && ($('#bm6').length === 0) && ($('#bm6').length === 0) && ($('#bm7').length === 0) && ($('#bm8').length === 0) && ($('#bm9').length === 0) && ($('#bm10').length === 0)){
       $('#usedLetters').replaceWith('<button id="nextGame">Next Game</button>');
-      $hangImg.replaceWith('<video width="400" height="400" autoplay> <source src="./hangManImages/fireworksWin.MOV">');
+      $hangImg.replaceWith('<video class="rotate" width="400" height="400" autoplay> <source src="./hangManImages/fireworksWin.m4v">');
       $("video").prop("volume", 0.3);
       $hangImg.css({"-webkit-filter": "invert(0%)"});
       $hangImg.css({'filter': 'invert(0%)'});
